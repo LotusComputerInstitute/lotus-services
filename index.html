@@ -5,58 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र, अजंग</title>
   
-  <!-- Ultra Colourful Gradient Lotus Favicon -->
+  <!-- Colorful Lotus Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='lotusGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ff007f'/><stop offset='50%25' stop-color='%23a855f7'/><stop offset='100%25' stop-color='%23f59e0b'/></linearGradient></defs><circle cx='50' cy='50' r='48' fill='white'/><circle cx='50' cy='50' r='45' fill='url(%23lotusGrad)'/><text x='50%25' y='55%25' font-size='50' text-anchor='middle' dominant-baseline='central'>🪷</text></svg>">
 
-  <!-- Professional Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root {
-      --primary: #0284c7;
-      --primary-dark: #0369a1;
-      --secondary: #16a34a;
-      --accent: #f59e0b;
-      --dark: #0f172a;
-      --slate: #475569;
-      --light-bg: #f8fafc;
-      --card-border: #e2e8f0;
-      --wa-color: #25d366;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
     }
-
     body {
       font-family: 'Mukta', sans-serif;
       background: #f1f5f9;
-      color: var(--dark);
+      color: #0f172a;
       line-height: 1.5;
       padding-bottom: 40px;
     }
-
     .container {
       max-width: 1140px;
       margin: 0 auto;
       padding: 0 16px;
     }
-
-    /* Top Sticky Status Bar */
     .top-strip {
       background: #ffffff;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1px solid #e2e8f0;
       padding: 8px 0;
       font-size: 13px;
-      color: var(--slate);
+      color: #475569;
     }
-
     .top-strip .container {
       display: flex;
       justify-content: space-between;
@@ -64,46 +46,27 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .top-strip a {
-      color: var(--primary);
+      color: #0284c7;
       text-decoration: none;
       font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
     }
-
-    /* Hero Center Card */
     .hero-card {
       background: #ffffff;
-      border-radius: 24px;
-      padding: 28px 24px;
-      margin: 20px auto 30px auto;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      border: 1px solid var(--card-border);
-      position: relative;
-      overflow: hidden;
+      border-radius: 20px;
+      padding: 24px 20px;
+      margin: 20px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      border-top: 5px solid #0284c7;
     }
-
-    .hero-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: linear-gradient(90deg, #ff007f, #f59e0b, #10b981, #0284c7);
-    }
-
     .badges-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
-
     .badge-pill {
       background: #f1f5f9;
       color: #334155;
@@ -111,118 +74,94 @@
       border-radius: 50px;
       font-size: 12px;
       font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       border: 1px solid #cbd5e1;
     }
-
     .badge-pill.highlight {
       background: #dcfce7;
       color: #166534;
       border-color: #bbf7d0;
     }
-
     .hero-main {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 20px;
       flex-wrap: wrap;
-      text-align: left;
     }
-
     .hero-brand {
       flex: 1;
       min-width: 280px;
     }
-
     .lotus-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 76px;
-      height: 76px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #fff0f5, #ffe4e6);
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: #ffe4e6;
       border: 2px solid #f43f5e;
       color: #e11d48;
-      font-size: 38px;
-      margin-bottom: 14px;
-      box-shadow: 0 8px 20px rgba(225, 29, 72, 0.15);
+      font-size: 34px;
+      margin-bottom: 10px;
     }
-
     .hero-brand h1 {
       font-family: 'Yatra One', cursive;
-      font-size: 30px;
+      font-size: 28px;
       color: #b91c1c;
       line-height: 1.25;
       margin-bottom: 4px;
     }
-
     .hero-brand h2 {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 700;
       color: #0369a1;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-
     .csp-banner {
       display: inline-block;
       background: #e0f2fe;
       color: #0369a1;
-      padding: 6px 14px;
-      border-radius: 8px;
+      padding: 5px 12px;
+      border-radius: 6px;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
       border: 1px solid #bae6fd;
       margin-bottom: 8px;
     }
-
     .hero-contact {
       background: #f8fafc;
-      border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 18px 20px;
-      min-width: 290px;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 18px;
+      min-width: 280px;
       flex: 0 1 auto;
     }
-
     .prop-name {
       font-size: 18px;
       font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: #0f172a;
+      margin-bottom: 6px;
     }
-
     .contact-item {
       font-size: 14px;
-      color: var(--slate);
+      color: #475569;
       margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
-
     .contact-item a {
-      color: var(--primary);
+      color: #0284c7;
       text-decoration: none;
       font-weight: 700;
     }
-
     .cta-actions {
       display: flex;
       gap: 10px;
-      margin-top: 14px;
+      margin-top: 12px;
       flex-wrap: wrap;
     }
-
     .btn-act {
       flex: 1;
-      min-width: 130px;
+      min-width: 120px;
       padding: 10px 14px;
       border-radius: 10px;
       font-size: 13px;
@@ -233,102 +172,44 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .btn-wa-main {
       background: #25d366;
       color: #ffffff;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
     }
-
     .btn-wa-channel {
       background: #ffffff;
       color: #0284c7;
       border: 1px solid #0284c7;
     }
-
-    .btn-act:hover {
-      transform: translateY(-2px);
-    }
-
-    /* Services Grid Section */
     .section-head {
       margin: 25px 0 16px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 8px;
     }
-
     .section-head h3 {
       font-size: 22px;
       font-weight: 800;
-      color: var(--dark);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: #0f172a;
     }
-
-    .section-head p {
-      font-size: 13px;
-      color: var(--slate);
-      font-weight: 600;
-    }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 14px;
     }
-
-    /* Individual Service Card */
     .service-card {
       background: #ffffff;
       border-radius: 16px;
       padding: 16px;
-      border: 1px solid var(--card-border);
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.25s ease;
       position: relative;
     }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
-      border-color: #cbd5e1;
-    }
-
-    /* Special highlight for the top 2 services */
     .service-card.priority-card {
-      border: 1.5px solid #22c55e;
-      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+      border: 2px solid #22c55e;
+      background: #f0fdf4;
     }
-
     .priority-badge {
       position: absolute;
-      top: 10px;
-      right: 12px;
-      background: #22c55e;
-      color: white;
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 7px;
-      border-radius: 20px;
-      letter-spacing: 0.5px;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .s-icon {
-      width: 44px;
-      height:
+      top: 10px
