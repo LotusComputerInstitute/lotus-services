@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र, अजंग</title>
-  <!-- Browser Tab / Search Bar Favicon Logo -->
+  
+  <!-- Search Bar / Browser Tab Lotus Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <style>
     :root {
-      --primary-blue: #0b4baf;
-      --deep-navy: #061c47;
-      --accent-gold: #ffb703;
-      --accent-orange: #fb8500;
-      --lotus-pink: #ff007f;
-      --fresh-green: #2ec4b6;
-      --wa-green: #25d366;
-      --card-bg: rgba(255, 255, 255, 0.94);
+      --primary-gradient: linear-gradient(135deg, #ff007f 0%, #7928ca 50%, #0070f3 100%);
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 30%, #064e3b 70%, #0c4a6e 100%);
+      --gold-gradient: linear-gradient(135deg, #f59e0b, #d97706, #fbbf24);
+      --card-bg: rgba(255, 255, 255, 0.96);
+      --text-dark: #0f172a;
     }
 
     * {
@@ -30,10 +30,12 @@
 
     body {
       font-family: 'Poppins', 'Tiro Devanagari Marathi', sans-serif;
-      background: linear-gradient(135deg, #051937 0%, #004d7a 40%, #008793 75%, #00bf72 100%);
-      color: #1e293b;
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-dark);
       min-height: 100vh;
-      padding: 20px 10px 40px 10px;
+      padding: 20px 12px 60px 12px;
+      overflow-x: hidden;
     }
 
     .container {
@@ -41,283 +43,314 @@
       margin: 0 auto;
     }
 
-    /* Animated Poster Header */
+    /* Animated Ultra Colorful Hero Poster */
     .hero-poster {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(240, 249, 255, 0.95));
-      border-radius: 24px;
-      padding: 30px 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-      border: 4px solid var(--accent-gold);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(254, 243, 199, 0.95), rgba(240, 253, 250, 0.96));
+      border-radius: 28px;
+      padding: 35px 25px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(234, 179, 8, 0.3);
+      border: 4px solid transparent;
+      border-image: linear-gradient(to right, #ff007f, #f59e0b, #10b981, #0070f3) 1;
+      border-radius: 28px;
       position: relative;
       overflow: hidden;
-      margin-bottom: 30px;
-      animation: floatPoster 6s ease-in-out infinite alternate;
+      margin-bottom: 35px;
+      animation: floatPoster 5s ease-in-out infinite alternate;
     }
 
     @keyframes floatPoster {
-      0% { transform: translateY(0px); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
-      100% { transform: translateY(-8px); box-shadow: 0 25px 55px rgba(0,0,0,0.45); }
+      0% { transform: translateY(0px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+      100% { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(255, 0, 127, 0.25); }
     }
 
     .badge-strip {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .gov-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      color: #1e40af;
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      border: 1px solid #cbd5e1;
+      color: #0f172a;
+      padding: 7px 18px;
+      border-radius: 50px;
+      font-weight: 800;
       font-size: 13px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+    }
+
+    .gov-badge:hover {
+      transform: translateY(-2px) scale(1.03);
+      border-color: #3b82f6;
     }
 
     .header-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 30px;
       flex-wrap: wrap;
       text-align: center;
     }
 
     .brand-left {
       flex: 1;
-      min-width: 290px;
+      min-width: 300px;
     }
 
     .lotus-logo {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 90px;
-      height: 90px;
-      background: linear-gradient(135deg, #fff0f5, #ffe4e6);
-      border: 3px solid var(--lotus-pink);
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ffe4e6 0%, #ff007f 100%);
+      border: 4px solid #ffffff;
       border-radius: 50%;
-      margin-bottom: 12px;
-      box-shadow: 0 8px 20px rgba(255, 0, 127, 0.3);
-      animation: pulseLogo 2.5s infinite;
+      margin-bottom: 14px;
+      box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
+      animation: pulseGlow 2.5s infinite;
     }
 
-    @keyframes pulseLogo {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 0, 127, 0.5); }
+      50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(255, 0, 127, 0.85); }
     }
 
     .lotus-logo i {
-      font-size: 48px;
-      color: var(--lotus-pink);
+      font-size: 52px;
+      color: #ffffff;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
     }
 
     .brand-title {
       font-family: 'Yatra One', cursive;
-      font-size: 32px;
-      color: #b91c1c;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-      line-height: 1.2;
+      font-size: 34px;
+      background: linear-gradient(135deg, #b91c1c, #c026d3, #1d4ed8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.25;
+      margin-bottom: 6px;
     }
 
     .brand-sub {
       font-family: 'Rozha One', serif;
-      font-size: 24px;
-      color: #1e3a8a;
-      margin-top: 4px;
+      font-size: 26px;
+      color: #047857;
+      margin-bottom: 8px;
     }
 
     .bank-csp-tag {
       display: inline-block;
-      background: linear-gradient(135deg, #0284c7, #0369a1);
+      background: linear-gradient(135deg, #0284c7, #2563eb, #1d4ed8);
       color: white;
-      padding: 8px 22px;
+      padding: 9px 24px;
       border-radius: 50px;
-      font-weight: 700;
-      font-size: 16px;
+      font-weight: 800;
+      font-size: 15px;
       margin: 12px 0;
-      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+      letter-spacing: 0.5px;
     }
 
     .owner-info {
-      background: #f8fafc;
-      padding: 14px 20px;
-      border-radius: 16px;
-      border: 1px dashed #cbd5e1;
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
+      padding: 20px 24px;
+      border-radius: 20px;
+      border: 2px solid #e2e8f0;
       display: inline-block;
       text-align: left;
       font-size: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     }
 
     .owner-info .name {
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 20px;
+      font-weight: 900;
       color: #0f172a;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      border-bottom: 2px solid #facc15;
+      padding-bottom: 4px;
+      display: inline-block;
     }
 
     .owner-info a {
       color: #0284c7;
       text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      font-weight: 700;
     }
 
     .quick-cta-box {
-      margin-top: 15px;
+      margin-top: 18px;
       display: flex;
       gap: 12px;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
 
     .btn-main-wa {
-      background: linear-gradient(135deg, #25d366, #128c7e);
+      background: linear-gradient(135deg, #25d366, #059669);
       color: white;
-      padding: 12px 24px;
+      padding: 12px 22px;
       border-radius: 50px;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 800;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
       transition: all 0.3s;
     }
 
     .btn-main-wa:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
     }
 
     .btn-channel-follow {
-      background: #ffffff;
-      color: #128c7e;
-      border: 2px solid #25d366;
-      padding: 12px 22px;
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      color: white;
+      padding: 12px 20px;
       border-radius: 50px;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 14px;
+      font-weight: 800;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      box-shadow: 0 6px 18px rgba(14, 165, 233, 0.35);
       transition: all 0.3s;
     }
 
     .btn-channel-follow:hover {
-      background: #dcfce7;
-      transform: translateY(-2px);
+      transform: scale(1.05);
+      box-shadow: 0 8px 22px rgba(14, 165, 233, 0.5);
     }
 
-    /* Section: Services List */
+    /* Section Title */
     .services-header {
       text-align: center;
       color: white;
-      margin: 35px 0 20px 0;
+      margin: 40px 0 25px 0;
     }
 
     .services-header h2 {
       font-family: 'Rozha One', serif;
-      font-size: 32px;
-      color: var(--accent-gold);
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      font-size: 36px;
+      background: linear-gradient(to right, #facc15, #f43f5e, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
       letter-spacing: 1px;
     }
 
-    .services-header p {
-      font-size: 16px;
-      opacity: 0.95;
-      margin-top: 4px;
-    }
-
+    /* Colorful Service Cards Grid */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 20px;
     }
 
     .service-card {
       background: var(--card-bg);
-      border-radius: 18px;
-      padding: 18px 20px;
+      border-radius: 20px;
+      padding: 22px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       border: 2px solid transparent;
-      transition: all 0.3s ease;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
       overflow: hidden;
     }
 
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #ff007f, #f59e0b, #10b981, #06b6d4);
+      opacity: 0.8;
+      transition: height 0.3s ease;
+    }
+
     .service-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent-gold);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+      transform: translateY(-8px) scale(1.02);
+      border-color: #facc15;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
       background: #ffffff;
+    }
+
+    .service-card:hover::before {
+      height: 8px;
     }
 
     .card-top {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: 15px;
+      margin-bottom: 16px;
     }
 
     .service-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
+      font-size: 24px;
       color: white;
       flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      transform: rotate(6deg) scale(1.1);
     }
 
     .service-name {
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 800;
       color: #0f172a;
       line-height: 1.35;
     }
 
     .btn-service-wa {
-      background: linear-gradient(135deg, #25d366, #1ebe57);
+      background: linear-gradient(135deg, #25d366, #15803d);
       color: white;
       text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 12px;
+      padding: 12px 16px;
+      border-radius: 14px;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      transition: all 0.25s ease;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.35);
     }
 
     .btn-service-wa:hover {
-      background: linear-gradient(135deg, #1ebe57, #128c7e);
-      transform: scale(1.02);
-      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+      background: linear-gradient(135deg, #10b981, #047857);
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.55);
     }
 
-    /* Icon Colors */
+    /* Colorful Icons Gradients */
     .c-loan { background: linear-gradient(135deg, #ef4444, #b91c1c); }
     .c-ins { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
     .c-pan { background: linear-gradient(135deg, #f59e0b, #d97706); }
@@ -331,40 +364,47 @@
     .c-card { background: linear-gradient(135deg, #14b8a6, #0f766e); }
     .c-photo { background: linear-gradient(135deg, #f97316, #c2410c); }
 
-    /* Footer Address Section */
+    /* Map Box Styling */
+    .map-box {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 24px;
+      padding: 26px;
+      margin-top: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      border: 3px solid #facc15;
+      text-align: center;
+    }
+
+    .btn-directions {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-directions:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.6);
+    }
+
+    /* Footer */
     .footer-bar {
       margin-top: 40px;
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: 20px;
-      padding: 24px 20px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-radius: 22px;
+      padding: 26px 20px;
       color: white;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-
-    .footer-bar .addr {
-      font-size: 15px;
-      color: #e2e8f0;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .footer-bar .slogan {
-      color: var(--accent-gold);
-      font-weight: 700;
-      font-size: 16px;
-      margin-top: 8px;
-    }
-
-    .footer-bar .copy {
-      font-size: 12px;
-      color: #94a3b8;
-      margin-top: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -372,12 +412,12 @@
 
   <div class="container">
     
-    <!-- Animated Poster Header Card -->
+    <!-- Hero Animated Poster -->
     <header class="hero-poster">
       <div class="badge-strip">
-        <span class="gov-badge"><i class="fas fa-landmark"></i> अधिकृत आपले सरकार सेवा केंद्र</span>
-        <span class="gov-badge"><i class="fas fa-university"></i> बँक ऑफ महाराष्ट्र CSP</span>
-        <span class="gov-badge"><i class="fas fa-laptop-code"></i> CSC अधिकृत केंद्र</span>
+        <span class="gov-badge"><i class="fas fa-landmark" style="color: #2563eb;"></i> अधिकृत आपले सरकार सेवा केंद्र</span>
+        <span class="gov-badge"><i class="fas fa-university" style="color: #059669;"></i> बँक ऑफ महाराष्ट्र CSP</span>
+        <span class="gov-badge"><i class="fas fa-laptop-code" style="color: #d97706;"></i> CSC अधिकृत केंद्र</span>
       </div>
 
       <div class="header-content">
@@ -390,22 +430,22 @@
           <div class="bank-csp-tag">
             <i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र अधिकृत ग्राहक सेवा केंद्र
           </div>
-          <p style="color: #475569; font-size: 14px; font-weight: 600;">
+          <p style="color: #475569; font-size: 14px; font-weight: 700; margin-top: 4px;">
             सर्व सेवा एकाच ठिकाणी... आपली सेवा आमच्या जवळ!
           </p>
         </div>
 
         <div class="owner-info">
-          <div class="name"><i class="fas fa-user-tie" style="color: #0284c7;"></i> प्रो. प्रा. श्री रवी कन्नोर</div>
-          <div style="margin: 6px 0;">
+          <div class="name"><i class="fas fa-user-tie" style="color: #2563eb;"></i> प्रो. प्रा. श्री रवी कन्नोर</div>
+          <div style="margin: 8px 0;">
             <i class="fas fa-phone-volume" style="color: #16a34a;"></i> <strong>संपर्क:</strong> 
             <a href="tel:7057163216">7057163216</a>
           </div>
-          <div style="margin: 6px 0;">
+          <div style="margin: 8px 0;">
             <i class="fas fa-envelope" style="color: #ea580c;"></i> <strong>ईमेल:</strong> 
             <a href="mailto:lotuspan17@gmail.com">lotuspan17@gmail.com</a>
           </div>
-          <div style="margin-top: 6px; color: #64748b; font-size: 13px;">
+          <div style="margin-top: 8px; color: #475569; font-size: 13px; font-weight: 600;">
             <i class="fas fa-location-dot" style="color: #dc2626;"></i> मराठी शाळेजवळ, अजंग, ता. मालेगाव, जि. नाशिक
           </div>
 
@@ -414,7 +454,7 @@
               <i class="fab fa-whatsapp"></i> व्हॉट्सॲपवर बोला
             </a>
             <a href="https://whatsapp.com/channel/0029Va5AemLFCCoLzeU6kH1j" target="_blank" class="btn-channel-follow">
-              <i class="fas fa-rss"></i> चॅनेल जॉईन करा
+              <i class="fas fa-rss"></i> चॅनेल फॉलो करा
             </a>
           </div>
         </div>
@@ -423,43 +463,13 @@
 
     <!-- Services Header -->
     <div class="services-header">
-      <h2><i class="fas fa-sparkles"></i> मिळणाऱ्या सर्व सुविधा (Services) <i class="fas fa-sparkles"></i></h2>
-      <p>तुम्हाला ज्या सेवेची गरज आहे त्या सेवेसमोरील <strong>"WhatsApp चौकशी करा"</strong> बटनावर क्लिक करा.</p>
+      <h2>✨ मिळणाऱ्या सर्व सुविधा (Services) ✨</h2>
+      <p style="color: #cbd5e1; font-weight: 600; margin-top: 6px;">हव्या असलेल्या सेवेसमोरील <strong>"WhatsApp चौकशी करा"</strong> बटनावर क्लिक करा.</p>
     </div>
 
-    <!-- 22 Services Grid with Dynamic WhatsApp Message -->
+    <!-- 24 Services Grid -->
     <div class="services-grid">
-<!-- २३. महा आयडी व महासारथी योजना -->
-      <div class="service-card">
-        <div class="card-top">
-          <div class="service-icon c-job"><i class="fas fa-id-card-clip"></i></div>
-          <div class="service-name">महा आयडी व महासारथी योजना नोंदणी</div>
-        </div>
-        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27महा%20आयडी%20व%20महासारथी%20योजना%27%20babat%20mahiti%20havi%20aahe." target="_blank" class="btn-service-wa">
-          <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
-        </a>
-      </div>
 
-      <!-- २४. महिला शेतकरी सबलीकरण योजना -->
-      <div class="service-card">
-        <div class="card-top">
-          <div class="service-icon c-farm"><i class="fas fa-person-dress"></i></div>
-          <div class="service-name">महिला शेतकरी सबलीकरण योजना अर्ज</div>
-        </div>
-        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27महिला%20शेतकरी%20सबलीकरण%20योजना%27%20babat%20online%20arj%20karaycha%20aahe." target="_blank" class="btn-service-wa">
-          <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
-        </a>
-      </div>
-       <!-- 6 -->
-      <div class="service-card">
-        <div class="card-top">
-          <div class="service-icon c-bus"><i class="fas fa-bus"></i></div>
-          <div class="service-name">NCMC बस कार्ड नोंदणी</div>
-        </div>
-        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27NCMC%20बस%20कार्ड%20नोंदणी%27%20karaychi%20aahe." target="_blank" class="btn-service-wa">
-          <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
-        </a>
-      </div>
       <!-- 1 -->
       <div class="service-card">
         <div class="card-top">
@@ -511,6 +521,17 @@
           <div class="service-name">मतदान कार्ड नोंदणी / दुरुस्ती</div>
         </div>
         <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27मतदान%20कार्ड%20नोंदणी%27%20babat%20mahiti%20havi%20aahe." target="_blank" class="btn-service-wa">
+          <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
+        </a>
+      </div>
+
+      <!-- 6 -->
+      <div class="service-card">
+        <div class="card-top">
+          <div class="service-icon c-bus"><i class="fas fa-bus"></i></div>
+          <div class="service-name">NCMC बस कार्ड नोंदणी</div>
+        </div>
+        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27NCMC%20बस%20कार्ड%20नोंदणी%27%20karaychi%20aahe." target="_blank" class="btn-service-wa">
           <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
         </a>
       </div>
@@ -574,7 +595,7 @@
       <div class="service-card">
         <div class="card-top">
           <div class="service-icon c-health"><i class="fas fa-heart-pulse"></i></div>
-          <div class="service-name">आयुष्मान भारत कार्ड (₹5 लाख मोफत उपचार)</div>
+          <div class="service-name">आयुष्मान भारत कार्ड (₹5 लाख मोफत)</div>
         </div>
         <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27आयुष्मान%20भारत%20कार्ड%27%20kadhayche%20aahe." target="_blank" class="btn-service-wa">
           <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
@@ -691,48 +712,67 @@
         </a>
       </div>
 
+      <!-- 23 -->
+      <div class="service-card">
+        <div class="card-top">
+          <div class="service-icon c-job"><i class="fas fa-id-card-clip"></i></div>
+          <div class="service-name">महा आयडी व महासारथी योजना</div>
+        </div>
+        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27महा%20आयडी%20व%20महासारथी%20योजना%27%20babat%20mahiti%20havi%20aahe." target="_blank" class="btn-service-wa">
+          <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
+        </a>
+      </div>
+
+      <!-- 24 -->
+      <div class="service-card">
+        <div class="card-top">
+          <div class="service-icon c-farm"><i class="fas fa-person-dress"></i></div>
+          <div class="service-name">महिला शेतकरी सबलीकरण योजना</div>
+        </div>
+        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20%27महिला%20शेतकरी%20सबलीकरण%20योजना%27%20babat%20online%20arj%20karaycha%20aahe." target="_blank" class="btn-service-wa">
+          <i class="fab fa-whatsapp"></i> WhatsApp चौकशी करा
+        </a>
+      </div>
+
     </div>
-<!-- Google Map & Live Location Section -->
-    <div style="background: white; border-radius: 20px; padding: 24px; margin-top: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px solid #e2e8f0; text-align: center;">
-      <h2 style="font-size: 22px; color: #15803d; font-weight: 800; margin-bottom: 8px;">
+
+    <!-- Live Google Map Section -->
+    <div class="map-box">
+      <h2 style="font-size: 24px; color: #15803d; font-weight: 800; margin-bottom: 8px;">
         <i class="fas fa-map-location-dot" style="color: #ea580c;"></i> केंद्राचे थेट ठिकाण (Live Location)
       </h2>
-      <p style="color: #64748b; font-size: 14px; margin-bottom: 18px;">
-        मराठी शाळेजवळ, अजंग, ता. मालेगाव, जि. नाशिक — केंद्रावर येण्यासाठी खालील नकाशा किंवा बटण वापरा.
+      <p style="color: #64748b; font-size: 14px; margin-bottom: 18px; font-weight: 600;">
+        मराठी शाळेजवळ, अजंग, ता. मालेगाव, जि. नाशिक — केंद्रावर येण्यासाठी खालील नकाशा वापरा.
       </p>
 
-      <!-- Embedded Google Map -->
-      <div style="width: 100%; height: 350px; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 20px;">
+      <div style="width: 100%; height: 360px; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 22px;">
         <iframe 
           src="https://maps.google.com/maps?q=20.6341554,74.4534173&hl=mr&z=17&output=embed" 
           width="100%" 
           height="100%" 
           style="border:0;" 
           allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
+          loading="lazy">
         </iframe>
       </div>
 
-      <!-- Directions Button -->
       <div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=20.6341554,74.4534173" 
-           target="_blank" 
-           style="background: linear-gradient(135deg, #0284c7, #0369a1); color: white; padding: 13px 26px; border-radius: 50px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4); transition: 0.3s;">
-          <i class="fas fa-diamond-turn-right" style="color: #facc15; font-size: 18px;"></i> Google Maps वर रस्ता पहा (Get Directions)
+        <a href="https://www.google.com/maps/dir/?api=1&destination=20.6341554,74.4534173" target="_blank" class="btn-directions">
+          <i class="fas fa-diamond-turn-right" style="color: #facc15; font-size: 20px;"></i> Google Maps वर रस्ता पहा (Get Directions)
         </a>
       </div>
     </div>
+
     <!-- Footer Information Bar -->
     <footer class="footer-bar">
-      <div class="addr">
-        <i class="fas fa-location-dot" style="color: var(--accent-gold);"></i> 
+      <div style="font-size: 15px; color: #e2e8f0; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
+        <i class="fas fa-location-dot" style="color: #facc15;"></i> 
         <strong>पत्ता:</strong> मराठी शाळेजवळ, अजंग, तालुका: मालेगाव, जिल्हा: नाशिक - ४२३२०६
       </div>
-      <div class="slogan">
+      <div style="color: #facc15; font-weight: 800; font-size: 16px; margin-top: 8px;">
         <i class="fas fa-shield-halved"></i> विश्वास | सुरक्षितता | सेवा — प्रत्येक नागरिकासाठी, डिजिटल भारतासाठी...
       </div>
-      <div class="copy">
+      <div style="font-size: 12px; color: #94a3b8; margin-top: 12px;">
         © 2026 लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र (बँक ऑफ महाराष्ट्र ग्राहक सेवा केंद्र) | सर्व हक्क राखीव.
       </div>
     </footer>
