@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र, अजंग</title>
+  <title>लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र | CSC VLE पोर्टल</title>
   
+  <!-- High-Tech Computer Microchip Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='techG' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2306b6d4'/><stop offset='50%25' stop-color='%233b82f6'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090d16'/><rect x='16' y='18' width='68' height='48' rx='8' fill='none' stroke='url(%23techG)' stroke-width='6'/><path d='M34 80h32M50 66v14' stroke='url(%23techG)' stroke-width='6' stroke-linecap='round'/><circle cx='50' cy='42' r='10' fill='url(%23techG)'/><circle cx='34' cy='42' r='3' fill='%2306b6d4'/><circle cx='66' cy='42' r='3' fill='%238b5cf6'/></svg>">
+
+  <!-- Noto Sans Devanagari for clean Unicode ligatures -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --primary: #0284c7;
-      --primary-dark: #0369a1;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --secondary: #06b6d4;
       --accent: #f59e0b;
-      --dark: #0f172a;
-      --slate: #475569;
-      --border: #e2e8f0;
+      --dark-bg: #090d16;
       --card-bg: #ffffff;
-      --bot-bg: #0f172a;
+      --border: #e2e8f0;
+      --slate: #475569;
+      --success: #16a34a;
     }
 
     * {
@@ -27,19 +32,26 @@
       margin: 0;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
+      font-feature-settings: "liga" 1;
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
       background: #f8fafc;
-      color: var(--dark);
-      line-height: 1.5;
-      padding-bottom: 90px;
+      color: #0f172a;
+      line-height: 1.6;
+      padding-bottom: 70px;
     }
 
-    /* Top Sticky Announcement */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Top Glowing Announcement Bar */
     .top-announcement {
-      background: linear-gradient(90deg, #0f172a, #1e1b4b, #0369a1);
+      background: linear-gradient(90deg, #090d16 0%, #1e1b4b 50%, #0369a1 100%);
       color: #ffffff;
       padding: 10px 16px;
       font-size: 13px;
@@ -48,9 +60,10 @@
       top: 0;
       z-index: 99;
       border-bottom: 2px solid var(--accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
     }
     .top-content {
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -58,11 +71,33 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    .btn-top-portal {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
+    .lms-pill {
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid var(--accent);
+      color: #fef08a;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      animation: pulseGlow 2s infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.03); }
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-top-recharge {
+      background: linear-gradient(135deg, #10b981, #059669);
       color: #ffffff;
       border: none;
-      padding: 6px 16px;
+      padding: 6px 14px;
       border-radius: 50px;
       font-size: 12px;
       font-weight: 800;
@@ -70,157 +105,155 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+    .btn-top-reg {
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    /* Center Header Card */
+    /* Hero Brand Banner */
     .hero-card {
       background: #ffffff;
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 28px 24px;
-      margin: 20px auto;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin: 20px auto 25px auto;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
       border: 1px solid var(--border);
       border-top: 6px solid var(--primary);
     }
-    .badge-strip {
+    .gov-badge-row {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .badge-item {
-      background: #f1f5f9;
+    .gov-pill {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
       color: #334155;
-      padding: 5px 12px;
+      padding: 4px 12px;
       border-radius: 50px;
       font-size: 12px;
       font-weight: 700;
-      border: 1px solid #cbd5e1;
-    }
-    .badge-item.active {
-      background: #dcfce7;
-      color: #166534;
-      border-color: #bbf7d0;
-    }
-    .hero-main {
-      display: flex;
-      justify-content: space-between;
+      display: inline-flex;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 6px;
     }
-    .brand-left {
-      flex: 1;
-      min-width: 280px;
+    .gov-pill.active {
+      background: #ecfdf5;
+      color: #047857;
+      border-color: #a7f3d0;
     }
-    .brand-left h1 {
-      font-family: 'Yatra One', cursive;
-      font-size: 30px;
+
+    .brand-title-wrap h1 {
+      font-size: 32px;
+      font-weight: 900;
       color: #b91c1c;
       line-height: 1.25;
+      margin-bottom: 4px;
     }
-    .brand-left h2 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #0369a1;
+    .brand-title-wrap h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0284c7;
       margin-bottom: 8px;
     }
-    .csp-tag {
+    .bank-csp-tag {
       display: inline-block;
       background: #e0f2fe;
       color: #0369a1;
       padding: 6px 14px;
       border-radius: 8px;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 13px;
       border: 1px solid #bae6fd;
     }
-    .contact-box {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px 20px;
-      min-width: 280px;
-    }
-    .prop-name {
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 6px;
-    }
-    .contact-row {
-      font-size: 13px;
-      color: var(--slate);
-      margin-bottom: 4px;
-    }
-    .contact-row a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 700;
-    }
 
-    /* CSC VLE Highlight Card */
-    .vle-card {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0369a1 100%);
-      color: white;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 28px;
+    /* CSC VLE Multi-Service Card */
+    .vle-hero-banner {
+      background: radial-gradient(circle at top right, #1e1b4b, #090d16);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 28px 24px;
+      margin-bottom: 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
       flex-wrap: wrap;
       border: 2px solid var(--accent);
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     }
-    .vle-card h3 {
-      font-size: 22px;
+    .vle-left h3 {
+      font-size: 24px;
       color: #facc15;
-      font-weight: 800;
-      margin-bottom: 6px;
+      font-weight: 900;
+      margin-bottom: 8px;
     }
-    .vle-card p {
+    .vle-left p {
       font-size: 14px;
       color: #cbd5e1;
+      max-width: 650px;
     }
-    .vle-pills {
+    .vle-tags {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-top: 12px;
+      margin-top: 14px;
     }
-    .vle-pill {
-      background: rgba(255, 255, 255, 0.12);
-      padding: 4px 12px;
+    .vle-tag-item {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
       border-radius: 50px;
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f8fafc;
     }
-    .btn-open-modal {
-      background: linear-gradient(135deg, #facc15, #f59e0b);
+    .vle-action-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-register-vle {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
       color: #0f172a;
       border: none;
-      padding: 14px 28px;
+      padding: 14px 26px;
       border-radius: 50px;
       font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+    .btn-wallet-top {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-size: 14px;
       font-weight: 800;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
     }
 
-    /* Services Section Header */
-    .section-head {
+    /* Section Headings */
+    .section-title-wrap {
       margin-bottom: 18px;
       display: flex;
       justify-content: space-between;
@@ -228,56 +261,56 @@
       flex-wrap: wrap;
       gap: 8px;
     }
-    .section-head h3 {
+    .section-title-wrap h3 {
       font-size: 22px;
-      font-weight: 800;
-      color: var(--dark);
+      font-weight: 900;
+      color: var(--dark-bg);
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .section-head p {
+    .section-title-wrap p {
       font-size: 13px;
       color: var(--slate);
     }
 
-    /* Clean Card Layout Without WhatsApp Button */
+    /* Services Grid (Clickable for Chatbot) */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 14px;
     }
     .service-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 18px 16px;
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 16px;
       border: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-      cursor: pointer;
-      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
       display: flex;
       align-items: center;
       gap: 12px;
+      cursor: pointer;
       position: relative;
+      transition: all 0.2s ease;
     }
     .service-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
       border-color: #cbd5e1;
     }
-    .service-card.priority {
-      border: 2px solid #22c55e;
+    .service-card.priority-gold {
+      border: 1.5px solid #22c55e;
       background: #f0fdf4;
     }
-    .tag-fresh {
+    .badge-corner {
       position: absolute;
       top: 8px;
       right: 10px;
-      background: #22c55e;
-      color: white;
+      background: #16a34a;
+      color: #ffffff;
       font-size: 9px;
-      font-weight: 800;
-      padding: 2px 6px;
+      font-weight: 900;
+      padding: 2px 7px;
       border-radius: 20px;
     }
     .s-icon {
@@ -293,16 +326,18 @@
     }
     .s-title {
       font-size: 14px;
-      font-weight: 700;
-      color: var(--dark);
+      font-weight: 800;
+      color: #0f172a;
       line-height: 1.35;
     }
-    .s-tap-hint {
+    .s-hint {
       font-size: 11px;
       color: #0284c7;
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 4px;
       margin-top: 3px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     /* Colors */
@@ -317,61 +352,74 @@
     .ic-orange { background: #f97316; }
     .ic-red { background: #ef4444; }
 
-    /* Map Box */
-    .map-box {
+    /* Footer Contact Card */
+    .footer-contact-card {
       background: #ffffff;
-      border-radius: 20px;
-      padding: 20px;
-      margin-top: 30px;
+      border-radius: 24px;
+      padding: 30px 24px;
+      margin-top: 40px;
       border: 1px solid var(--border);
-      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
-    .map-frame {
-      width: 100%;
-      height: 300px;
-      border-radius: 14px;
-      overflow: hidden;
-      margin: 14px 0;
-      border: 1px solid var(--border);
+    .footer-info h4 {
+      font-size: 20px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 6px;
     }
-    .btn-dir {
-      background: #0284c7;
-      color: white;
-      padding: 10px 22px;
-      border-radius: 50px;
+    .footer-info p {
       font-size: 14px;
-      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 4px;
+    }
+    .footer-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-contact-act {
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 800;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
+    .btn-wa-green { background: #25d366; color: white; }
+    .btn-call-blue { background: #0284c7; color: white; }
 
-    /* MODAL POPUP */
+    /* Modal System */
     .modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(5px);
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(6px);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 9999;
-      padding: 14px;
+      padding: 16px;
     }
-    .modal-card {
+    .modal-box {
       background: #ffffff;
-      border-radius: 22px;
-      max-width: 580px;
+      border-radius: 24px;
+      max-width: 600px;
       width: 100%;
       max-height: 90vh;
       overflow-y: auto;
-      padding: 26px 22px;
+      padding: 28px 22px;
       position: relative;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
       border: 2px solid var(--accent);
     }
     .modal-close {
@@ -380,26 +428,24 @@
       right: 16px;
       background: #f1f5f9;
       border: none;
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       cursor: pointer;
       font-size: 14px;
+      font-weight: bold;
     }
-
-    /* Modal Text in Marathi */
-    .modal-head h3 {
-      font-size: 21px;
-      font-weight: 800;
+    .modal-header h3 {
+      font-size: 22px;
+      font-weight: 900;
       color: #0f172a;
     }
-    .modal-head p {
+    .modal-header p {
       font-size: 13px;
-      color: #64748b;
-      margin-top: 3px;
-      margin-bottom: 16px;
+      color: var(--slate);
+      margin: 4px 0 16px 0;
     }
-    .form-row {
+    .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
@@ -407,7 +453,7 @@
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 4px;
       text-align: left;
     }
     .form-group.full {
@@ -415,7 +461,7 @@
     }
     .form-group label {
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       color: #334155;
     }
     .form-group input, .form-group textarea {
@@ -424,33 +470,36 @@
       border: 1px solid #cbd5e1;
       font-size: 14px;
       font-family: inherit;
-      background: #f8fafc;
       outline: none;
-    }
-    .srv-select-box {
       background: #f8fafc;
-      border: 1px solid #e2e8f0;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: #2563eb;
+      background: #ffffff;
+    }
+    .service-chk-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 12px;
       margin: 14px 0;
-      text-align: left;
     }
-    .srv-select-box h5 {
+    .service-chk-box h5 {
       font-size: 13px;
       font-weight: 800;
       margin-bottom: 8px;
     }
-    .chk-lbl {
+    .chk-line {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 6px;
       cursor: pointer;
     }
-    .btn-submit-marathi {
-      background: #0284c7;
+    .btn-submit-reg {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: white;
       border: none;
       padding: 12px;
@@ -459,60 +508,61 @@
       font-weight: 800;
       width: 100%;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
     }
 
-    /* Modal Step 2 Payment Screen */
-    #paymentScreen {
+    /* Modal Step 2 Success & Redirect */
+    #stepSuccess {
       display: none;
       text-align: center;
     }
-    .qr-frame {
+    .qr-container {
       display: inline-block;
       padding: 10px;
-      border-radius: 14px;
-      background: #ffffff;
+      border-radius: 16px;
+      background: white;
       border: 1px solid #cbd5e1;
       margin: 14px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
-    .qr-frame img {
+    .qr-container img {
       width: 190px;
       height: 190px;
       display: block;
     }
-    .btn-phonepe-app {
-      background: #5f259f;
-      color: white;
-      padding: 10px 20px;
+    .btn-portal-redirect {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0f172a;
+      padding: 14px 26px;
       border-radius: 50px;
-      font-size: 13px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 900;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.4);
+      margin-top: 10px;
     }
-    .btn-send-wa-final {
+    .btn-wa-confirm-direct {
       background: #25d366;
       color: white;
-      padding: 14px 22px;
+      padding: 12px 20px;
       border-radius: 50px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       margin-top: 10px;
-      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
     }
 
-    /* FLOATING AI CHATBOT */
-    .chatbot-float-btn {
+    /* Chatbot Interface */
+    .chatbot-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(135deg, #0284c7, #1d4ed8);
+      background: linear-gradient(135deg, #0284c7, #1e40af);
       color: white;
       padding: 12px 20px;
       border-radius: 50px;
@@ -523,18 +573,13 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      z-index: 999;
-      animation: floatBot 3s ease-in-out infinite alternate;
-    }
-    @keyframes floatBot {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-5px); }
+      z-index: 998;
     }
     .chat-window {
       position: fixed;
       bottom: 80px;
       right: 20px;
-      width: 340px;
+      width: 350px;
       height: 480px;
       background: #ffffff;
       border-radius: 20px;
@@ -553,20 +598,6 @@
       justify-content: space-between;
       align-items: center;
     }
-    .chat-header h4 {
-      font-size: 14px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .chat-close {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
     .chat-body {
       flex: 1;
       padding: 14px;
@@ -581,7 +612,7 @@
       padding: 10px 12px;
       border-radius: 12px;
       font-size: 13px;
-      line-height: 1.4;
+      line-height: 1.45;
     }
     .msg-bot {
       background: #e2e8f0;
@@ -595,14 +626,14 @@
       align-self: flex-end;
       border-bottom-right-radius: 2px;
     }
-    .quick-chips {
+    .chat-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
-      margin-top: 5px;
+      margin-top: 8px;
     }
-    .chip-btn {
-      background: #ffffff;
+    .chip {
+      background: white;
       border: 1px solid #0284c7;
       color: #0284c7;
       padding: 4px 8px;
@@ -637,7 +668,7 @@
     }
 
     @media (max-width: 640px) {
-      .form-row { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
       .form-group.full { grid-column: span 1; }
       .services-grid { grid-template-columns: 1fr; }
       .chat-window { width: 92%; right: 4%; }
@@ -646,588 +677,635 @@
 </head>
 <body>
 
-  <!-- Top Strip -->
+  <!-- Top Announcement Bar -->
   <div class="top-announcement">
     <div class="top-content">
-      <div>
-        <i class="fas fa-bullhorn" style="color: #facc15;"></i>
-        <strong>CSC चालक नोंदणी:</strong> शेतकरी आयडी, बांधकाम कामगार व महासारथी बल्क प्रिंट पोर्टल!
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <span class="lms-pill"><i class="fas fa-certificate"></i> विशेष सेवा</span>
+        <span><strong>Aadhaar LMS Certificate</strong> खात्रीशीर काढून मिळेल!</span>
       </div>
-      <button class="btn-top-portal" onclick="openRegisterModal()">
-        <i class="fas fa-user-plus"></i> चालक नोंदणी करा
-      </button>
+      <div class="top-actions">
+        <button class="btn-top-recharge" onclick="openWalletModal()">
+          <i class="fas fa-wallet"></i> बॅलन्स ॲड करा
+        </button>
+        <button class="btn-top-reg" onclick="openRegisterModal()">
+          <i class="fas fa-user-plus"></i> पोर्टल नोंदणी
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="container">
 
-    <!-- Header Center Identity -->
+    <!-- Hero Card -->
     <header class="hero-card">
-      <div class="badge-strip">
-        <span class="badge-item active"><i class="fas fa-shield-halved"></i> अधिकृत आपले सरकार केंद्र</span>
-        <span class="badge-item"><i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र CSP</span>
-        <span class="badge-item"><i class="fas fa-desktop"></i> अधिकृत CSC केंद्र</span>
+      <div class="gov-badge-row">
+        <span class="gov-pill active"><i class="fas fa-shield-halved"></i> अधिकृत आपले सरकार केंद्र</span>
+        <span class="gov-pill"><i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र ग्राहक सेवा केंद्र (CSP)</span>
+        <span class="gov-pill"><i class="fas fa-desktop"></i> अधिकृत CSC केंद्र</span>
       </div>
 
-      <div class="hero-main">
-        <div class="brand-left">
-          <h1>लोटस कॉम्प्युटर इन्स्टिट्यूट</h1>
-          <h2>व आपले सरकार सेवा केंद्र</h2>
-          <div class="csp-tag"><i class="fas fa-university"></i> बँक ऑफ महाराष्ट्र अधिकृत ग्राहक सेवा केंद्र</div>
-        </div>
-
-        <div class="contact-box">
-          <div class="prop-name"><i class="fas fa-circle-user" style="color: #0284c7;"></i> प्रो. प्रा. श्री रवी कन्नोर</div>
-          <div class="contact-row"><i class="fas fa-phone-volume" style="color: #16a34a;"></i> <strong>मोबाईल:</strong> <a href="tel:7057163216">7057163216</a></div>
-          <div class="contact-row"><i class="fas fa-envelope" style="color: #ea580c;"></i> <strong>ईमेल:</strong> <a href="mailto:lotuspan17@gmail.com">lotuspan17@gmail.com</a></div>
-          <div class="contact-row"><i class="fas fa-location-dot" style="color: #dc2626;"></i> मराठी शाळेजवळ, अजंग, ता. मालेगाव</div>
+      <div class="brand-title-wrap">
+        <h1>लोटस कॉम्प्युटर इन्स्टिट्यूट</h1>
+        <h2>व आपले सरकार सेवा केंद्र</h2>
+        <div class="bank-csp-tag">
+          <i class="fas fa-university"></i> बँक ऑफ महाराष्ट्र अधिकृत ग्राहक सेवा केंद्र, अजंग
         </div>
       </div>
     </header>
 
-    <!-- CSC VLE Highlight Section -->
-    <section class="vle-card">
-      <div>
-        <h3><i class="fas fa-crown"></i> सीएससी व डिजिटल केंद्र चालकांसाठी विशेष पोर्टल</h3>
-        <p>स्मार्ट कार्ड तयार करण्याची झंझट कायमची मिटवा! १-क्लिक पीव्हीसी रेडी फॉरमॅट उपलब्ध.</p>
-        <div class="vle-pills">
-          <span class="vle-pill"><i class="fas fa-check-circle" style="color: #4ade80;"></i> बांधकाम कामगार स्मार्ट कार्ड</span>
-          <span class="vle-pill"><i class="fas fa-check-circle" style="color: #4ade80;"></i> शेतकरी आयडी कार्ड (Farmer ID)</span>
-          <span class="vle-pill"><i class="fas fa-check-circle" style="color: #4ade80;"></i> महासारथी कार्ड बल्क प्रिंट</span>
+    <!-- CSC VLE Card Banner -->
+    <section class="vle-hero-banner">
+      <div class="vle-left">
+        <h3><i class="fas fa-bolt" style="color: #facc15;"></i> CSC केंद्र चालकांसाठी कार्ड जनरेटर पोर्टल</h3>
+        <p>आता शेतकरी ओळखपत्र (Farmer ID), बांधकाम कामगार कार्ड (BOCW) व महासारथी कार्ड अवघ्या १ क्लिकमध्ये प्रिंट करा!</p>
+        <div class="vle-tags">
+          <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> शेतकरी आयडी (Farmer ID)</span>
+          <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> बांधकाम कामगार कार्ड</span>
+          <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> महासारथी बल्क प्रिंट</span>
+          <span class="vle-tag-item" style="color: #fef08a;"><i class="fas fa-coins"></i> प्रति कार्ड फक्त ₹१०</span>
         </div>
       </div>
-      <div>
-        <button class="btn-open-modal" onclick="openRegisterModal()">
-          <i class="fas fa-bolt"></i> पोर्टल ॲक्सेस मिळवा
+      <div class="vle-action-group">
+        <button class="btn-register-vle" onclick="openRegisterModal()">
+          <i class="fas fa-user-plus"></i> चालक नोंदणी करा
+        </button>
+        <button class="btn-wallet-top" onclick="openWalletModal()">
+          <i class="fas fa-wallet"></i> वॉलेट रिचार्ज करा
         </button>
       </div>
     </section>
 
     <!-- Services Header -->
-    <div class="section-head">
-      <h3><i class="fas fa-layer-group" style="color: #0284c7;"></i> डिजिटल व शासकीय सेवांची माहिती</h3>
-      <p>कोणत्याही सेवेवर क्लिक करा, आमचा <strong>स्मार्ट मदतनीस (Chatbot)</strong> तुम्हाला त्वरित माहिती देईल.</p>
+    <div class="section-title-wrap">
+      <h3><i class="fas fa-layer-group" style="color: #0284c7;"></i> सर्व डिजिटल व शासकीय सेवा</h3>
+      <p>माहितीसाठी सेवेवर क्लिक करा; आमचा स्मार्ट मदतनीस तुम्हाला अचूक कागदपत्रे सांगेल.</p>
     </div>
 
-    <!-- Clean Services Grid (Click opens Auto Chatbot) -->
+    <!-- 24 Services Grid (Click opens accurate Chatbot) -->
     <div class="services-grid">
 
-      <!-- 1 -->
-      <div class="service-card priority" onclick="askBotForService('महा आयडी व महासारथी योजना')">
-        <span class="tag-fresh">नवीन</span>
+      <div class="service-card priority-gold" onclick="askBot('महा आयडी')">
+        <span class="badge-corner">नवीन</span>
         <div class="s-icon ic-indigo"><i class="fas fa-id-card-clip"></i></div>
         <div>
           <div class="s-title">महा आयडी व महासारथी योजना</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 2 -->
-      <div class="service-card priority" onclick="askBotForService('महिला शेतकरी सबलीकरण योजना')">
-        <span class="tag-fresh">नवीन</span>
+      <div class="service-card priority-gold" onclick="askBot('महिला शेतकरी')">
+        <span class="badge-corner">नवीन</span>
         <div class="s-icon ic-rose"><i class="fas fa-person-dress"></i></div>
         <div>
           <div class="s-title">महिला शेतकरी सबलीकरण योजना</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 3 -->
-      <div class="service-card" onclick="askBotForService('नवीन पॅन कार्ड / दुरुस्ती')">
+      <div class="service-card" onclick="askBot('lms')">
+        <span class="badge-corner" style="background:#f59e0b;">खास</span>
+        <div class="s-icon ic-amber"><i class="fas fa-award"></i></div>
+        <div>
+          <div class="s-title">Aadhaar LMS Certificate</div>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+        </div>
+      </div>
+
+      <div class="service-card" onclick="askBot('पॅन कार्ड')">
         <div class="s-icon ic-amber"><i class="fas fa-address-card"></i></div>
         <div>
           <div class="s-title">नवीन पॅन कार्ड / दुरुस्ती</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 4 -->
-      <div class="service-card" onclick="askBotForService('आधार कार्ड अपडेट सेवा')">
+      <div class="service-card" onclick="askBot('आधार अपडेट')">
         <div class="s-icon ic-green"><i class="fas fa-fingerprint"></i></div>
         <div>
           <div class="s-title">आधार कार्ड अपडेट सेवा</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 5 -->
-      <div class="service-card" onclick="askBotForService('मतदान कार्ड नोंदणी / दुरुस्ती')">
+      <div class="service-card" onclick="askBot('मतदान')">
         <div class="s-icon ic-purple"><i class="fas fa-check-to-slot"></i></div>
         <div>
           <div class="s-title">मतदान कार्ड नोंदणी / दुरुस्ती</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 6 -->
-      <div class="service-card" onclick="askBotForService('NCMC बस कार्ड नोंदणी')">
+      <div class="service-card" onclick="askBot('ncmc')">
         <div class="s-icon ic-rose"><i class="fas fa-bus"></i></div>
         <div>
           <div class="s-title">NCMC बस कार्ड नोंदणी</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 7 -->
-      <div class="service-card" onclick="askBotForService('उत्पन्न दाखला')">
+      <div class="service-card" onclick="askBot('उत्पन्न')">
         <div class="s-icon ic-cyan"><i class="fas fa-file-invoice"></i></div>
         <div>
           <div class="s-title">उत्पन्न दाखला (Income)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 8 -->
-      <div class="service-card" onclick="askBotForService('जातीचा दाखला')">
+      <div class="service-card" onclick="askBot('जात')">
         <div class="s-icon ic-cyan"><i class="fas fa-file-shield"></i></div>
         <div>
           <div class="s-title">जातीचा दाखला (Caste)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 9 -->
-      <div class="service-card" onclick="askBotForService('वय व अधिवास दाखला')">
+      <div class="service-card" onclick="askBot('अधिवास')">
         <div class="s-icon ic-cyan"><i class="fas fa-certificate"></i></div>
         <div>
           <div class="s-title">वय व अधिवास दाखला (Domicile)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 10 -->
-      <div class="service-card" onclick="askBotForService('नॉन क्रिमिलियर प्रमाणपत्र')">
+      <div class="service-card" onclick="askBot('नॉन क्रिमिलियर')">
         <div class="s-icon ic-cyan"><i class="fas fa-stamp"></i></div>
         <div>
           <div class="s-title">नॉन क्रिमिलियर प्रमाणपत्र</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 11 -->
-      <div class="service-card" onclick="askBotForService('रहिवासी दाखला')">
+      <div class="service-card" onclick="askBot('रहिवासी')">
         <div class="s-icon ic-cyan"><i class="fas fa-house-user"></i></div>
         <div>
           <div class="s-title">रहिवासी दाखला (Residence)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 12 -->
-      <div class="service-card" onclick="askBotForService('आयुष्मान भारत कार्ड')">
+      <div class="service-card" onclick="askBot('आयुष्मान')">
         <div class="s-icon ic-red"><i class="fas fa-heart-pulse"></i></div>
         <div>
           <div class="s-title">आयुष्मान भारत कार्ड (₹५ लाख मोफत)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 13 -->
-      <div class="service-card" onclick="askBotForService('आभा कार्ड नोंदणी')">
+      <div class="service-card" onclick="askBot('आभा')">
         <div class="s-icon ic-red"><i class="fas fa-notes-medical"></i></div>
         <div>
           <div class="s-title">आभा कार्ड नोंदणी (ABHA)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 14 -->
-      <div class="service-card" onclick="askBotForService('e-श्रम कार्ड नोंदणी')">
+      <div class="service-card" onclick="askBot('e-श्रम')">
         <div class="s-icon ic-indigo"><i class="fas fa-users-gear"></i></div>
         <div>
           <div class="s-title">e-श्रम कार्ड नोंदणी (e-Shram)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 15 -->
-      <div class="service-card" onclick="askBotForService('शेती योजना MahaDBT')">
+      <div class="service-card" onclick="askBot('शेती')">
         <div class="s-icon ic-green"><i class="fas fa-seedling"></i></div>
         <div>
           <div class="s-title">सर्व शेती योजना (MahaDBT)</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 16 -->
-      <div class="service-card" onclick="askBotForService('शालेय योजना व स्कॉलरशिप')">
+      <div class="service-card" onclick="askBot('शालेय')">
         <div class="s-icon ic-indigo"><i class="fas fa-user-graduate"></i></div>
         <div>
           <div class="s-title">शालेय योजना व स्कॉलरशिप</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 17 -->
-      <div class="service-card" onclick="askBotForService('नोकरी भरती फॉर्म')">
+      <div class="service-card" onclick="askBot('नोकरी')">
         <div class="s-icon ic-indigo"><i class="fas fa-briefcase"></i></div>
         <div>
           <div class="s-title">नोकरी भरती ऑनलाइन फॉर्म</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 18 -->
-      <div class="service-card" onclick="askBotForService('७/१२ व ८-अ नोंद')">
+      <div class="service-card" onclick="askBot('७/१२')">
         <div class="s-icon ic-green"><i class="fas fa-file-contract"></i></div>
         <div>
           <div class="s-title">७/१२ खाते उतारा व ८-अ नोंद</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 19 -->
-      <div class="service-card" onclick="askBotForService('वाहन इन्शुरन्स')">
+      <div class="service-card" onclick="askBot('इन्शुरन्स')">
         <div class="s-icon ic-blue"><i class="fas fa-car-burst"></i></div>
         <div>
           <div class="s-title">2 व 4 व्हीलर इन्शुरन्स</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 20 -->
-      <div class="service-card" onclick="askBotForService('पासपोर्ट व व्हिझा')">
+      <div class="service-card" onclick="askBot('पासपोर्ट')">
         <div class="s-icon ic-blue"><i class="fas fa-passport"></i></div>
         <div>
           <div class="s-title">पासपोर्ट / व्हिझा ऑनलाइन अर्ज</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 21 -->
-      <div class="service-card" onclick="askBotForService('PVC स्मार्टकार्ड प्रिंट')">
+      <div class="service-card" onclick="askBot('pvc')">
         <div class="s-icon ic-teal"><i class="fas fa-id-badge"></i></div>
         <div>
           <div class="s-title">सर्व PVC स्मार्टकार्ड प्रिंट</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 22 -->
-      <div class="service-card" onclick="askBotForService('अर्जंट पासपोर्ट फोटो')">
+      <div class="service-card" onclick="askBot('फोटो')">
         <div class="s-icon ic-orange"><i class="fas fa-camera-retro"></i></div>
         <div>
           <div class="s-title">अर्जंट पासपोर्ट फोटो</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 23 -->
-      <div class="service-card" onclick="askBotForService('सर्व प्रकारच्या लोन सुविधा')">
+      <div class="service-card" onclick="askBot('लोन')">
         <div class="s-icon ic-red"><i class="fas fa-hand-holding-dollar"></i></div>
         <div>
           <div class="s-title">सर्व प्रकारच्या लोन सुविधा</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
-      <!-- 24 -->
-      <div class="service-card" onclick="askBotForService('पर्सनल व बिझनेस लोन')">
+      <div class="service-card" onclick="askBot('लोन')">
         <div class="s-icon ic-red"><i class="fas fa-money-check-dollar"></i></div>
         <div>
           <div class="s-title">पर्सनल / बिझनेस लोन सुविधा</div>
-          <span class="s-tap-hint"><i class="fas fa-comment-dots"></i> माहिती जाणून घ्या</span>
+          <span class="s-hint"><i class="fas fa-comment-dots"></i> माहिती व कागदपत्रे</span>
         </div>
       </div>
 
     </div>
 
-    <!-- Map Box -->
-    <section class="map-box">
-      <h4><i class="fas fa-map-location-dot" style="color: #ea580c;"></i> केंद्राचे थेट लोकेशन (Live Location)</h4>
-      <p style="color: #64748b; font-size: 13px;">मराठी शाळेजवळ, अजंग, ता. मालेगाव, जि. नाशिक</p>
-      <div class="map-frame">
-        <iframe src="https://maps.google.com/maps?q=20.6341554,74.4534173&hl=mr&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Contact & Center Details (Clean Footer Section) -->
+    <div class="footer-contact-card">
+      <div class="footer-info">
+        <h4><i class="fas fa-circle-user" style="color: #2563eb;"></i> प्रो. प्रा. श्री रवी कन्नोर</h4>
+        <p><i class="fas fa-location-dot" style="color: #ef4444;"></i> <strong>पत्ता:</strong> मराठी शाळेजवळ, अजंग, ता. मालेगाव, जि. नाशिक - ४२३२०६</p>
+        <p><i class="fas fa-envelope" style="color: #f59e0b;"></i> <strong>ईमेल:</strong> lotuspan17@gmail.com</p>
+        <p><i class="fas fa-shield-halved" style="color: #10b981;"></i> <strong>विश्वास | सुरक्षितता | सेवा</strong> — लोटस कॉम्प्युटर इन्स्टिट्यूट</p>
       </div>
-      <div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=20.6341554,74.4534173" target="_blank" class="btn-dir">
-          <i class="fas fa-diamond-turn-right" style="color: #facc15;"></i> Google Maps वर रस्ता पहा
+      <div class="footer-actions">
+        <a href="tel:7057163216" class="btn-contact-act btn-call-blue">
+          <i class="fas fa-phone-volume"></i> 7057163216 कॉल करा
+        </a>
+        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20Aaple%20Sarkar%20Kendra%20sevanbabat%20mahiti%20havi%20aahe." target="_blank" class="btn-contact-act btn-wa-green">
+          <i class="fab fa-whatsapp"></i> WhatsApp वर बोला
         </a>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="margin-top: 30px; text-align: center; font-size: 13px; color: #64748b; padding: 15px 0;">
-      <p>लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र (बँक ऑफ महाराष्ट्र CSP, अजंग)</p>
-    </footer>
+    </div>
 
   </div>
 
-  <!-- REGISTRATION MODAL (Instructions In Marathi, Form In Clean English) -->
-  <div class="modal-overlay" id="regModal" onclick="closeModalOnOutside(event)">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeRegisterModal()"><i class="fas fa-times"></i></button>
+  <!-- MODAL 1: CSC VLE Registration + Password + Redirect -->
+  <div class="modal-overlay" id="regModal" onclick="closeModalOnOutside(event, 'regModal')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('regModal')"><i class="fas fa-times"></i></button>
 
-      <!-- Step 1: Form -->
-      <div id="formScreen">
-        <div class="modal-head">
-          <h3><i class="fas fa-id-card-clip" style="color: #0284c7;"></i> CSC चालक पोर्टल नोंदणी</h3>
-          <p>खालील माहिती भरा आणि त्वरित PhonePe QR कोड द्वारे ॲक्टिव्हेशन पूर्ण करा.</p>
+      <div id="stepForm">
+        <div class="modal-header">
+          <h3><i class="fas fa-user-plus" style="color: #0284c7;"></i> CSC VLE पोर्टल नोंदणी</h3>
+          <p>पोर्टल लॉगिन आयडीसाठी खालील माहिती भरा. नोंदणीनंतर लगेच पोर्टल सुरू होईल.</p>
         </div>
 
         <form onsubmit="handleRegistrationSubmit(event)">
-          <div class="form-row">
+          <div class="form-grid">
             <div class="form-group">
               <label>पूर्ण नाव (Full Name) *</label>
-              <input type="text" id="regName" placeholder="उदा. Rahul Pawar" required>
+              <input type="text" id="vleFullName" placeholder="उदा. Rahul Pawar" required>
             </div>
-
             <div class="form-group">
-              <label>व्हॉट्सॲप नंबर (Mobile No) *</label>
-              <input type="tel" id="regMobile" placeholder="उदा. 98XXXXXXXX" pattern="[0-9]{10}" required>
+              <label>व्हॉट्सॲप नंबर (Mobile) *</label>
+              <input type="tel" id="vleMobile" placeholder="उदा. 98XXXXXXXX" pattern="[0-9]{10}" required>
             </div>
-
             <div class="form-group">
-              <label>ईमेल आयडी (Email ID)</label>
-              <input type="email" id="regEmail" placeholder="उदा. center@gmail.com">
+              <label>ईमेल आयडी (हाच लॉगिन ID असेल) *</label>
+              <input type="email" id="vleEmail" placeholder="उदा. rahul@gmail.com" required>
             </div>
-
             <div class="form-group">
+              <label>पासवर्ड सेट करा (Set Password) *</label>
+              <input type="password" id="vlePassword" placeholder="किमान ६ अक्षरी पासवर्ड" minlength="6" required>
+            </div>
+            <div class="form-group full">
               <label>केंद्राचे नाव (Center Name) *</label>
-              <input type="text" id="regCenter" placeholder="उदा. Sai CSC Center" required>
+              <input type="text" id="vleCenter" placeholder="उदा. साई आपले सरकार केंद्र" required>
             </div>
-
             <div class="form-group full">
               <label>केंद्राचा पत्ता (गाव / तालुका / जिल्हा) *</label>
-              <textarea id="regAddress" rows="2" placeholder="उदा. Near Bus Stand, Ajang, Malegaon, Nashik" required></textarea>
+              <textarea id="vleAddress" rows="2" placeholder="उदा. बस स्टँडजवळ, अजंग, मालेगाव" required></textarea>
             </div>
           </div>
 
-          <div class="srv-select-box">
-            <h5>कोणत्या सेवांचे पोर्टल हवे आहे? (Services Required):</h5>
-            <label class="chk-lbl">
-              <input type="checkbox" name="services" value="Bandhkam Kamgar ID" checked>
+          <div class="service-chk-box">
+            <h5>हव्या असणाऱ्या सेवा निवडा:</h5>
+            <label class="chk-line">
+              <input type="checkbox" name="vleServices" value="Bandhkam Kamgar ID" checked>
               <span>१. बांधकाम कामगार स्मार्ट कार्ड (BOCW Card Ready Print)</span>
             </label>
-            <label class="chk-lbl">
-              <input type="checkbox" name="services" value="Farmer ID Card" checked>
+            <label class="chk-line">
+              <input type="checkbox" name="vleServices" value="Farmer ID Card" checked>
               <span>२. शेतकरी ओळखपत्र (Farmer ID Card 1-Click Print)</span>
             </label>
-            <label class="chk-lbl">
-              <input type="checkbox" name="services" value="Mahasarthi Bulk Print" checked>
+            <label class="chk-line">
+              <input type="checkbox" name="vleServices" value="Mahasarthi Bulk Print" checked>
               <span>३. महासारथी कार्ड बल्क प्रिंट (Mahasarthi Bulk Print)</span>
             </label>
           </div>
 
-          <button type="submit" class="btn-submit-marathi">
-            पुढे जा आणि PhonePe QR मिळवा <i class="fas fa-arrow-right"></i>
+          <button type="submit" class="btn-submit-reg">
+            नोंदणी पूर्ण करा आणि पोर्टल सुरू करा <i class="fas fa-arrow-right"></i>
           </button>
         </form>
       </div>
 
-      <!-- Step 2: Payment & WhatsApp Reminder (Fixed URL Encoder) -->
-      <div id="paymentScreen">
-        <h4 style="color: #16a34a; font-size: 19px; font-weight: 800;">
-          <i class="fas fa-check-circle"></i> नोंदणी सेव्ह झाली आहे!
-        </h4>
-        <p style="font-size: 13px; color: #475569; margin-top: 4px;">
-          खालील <strong>PhonePe QR कोड</strong> स्कॅन करून पेमेंट पूर्ण करा.
+      <!-- Step 2: Success & Direct Portal Redirect -->
+      <div id="stepSuccess">
+        <h3 style="color: #16a34a; font-size: 20px; font-weight: 800;">
+          <i class="fas fa-circle-check"></i> नोंदणी यशस्वी झाली आहे!
+        </h3>
+        <p style="font-size: 14px; color: #475569; margin: 6px 0;">
+          तुमचा लॉगिन आयडी: <strong id="dispEmail" style="color:#0284c7;"></strong>
         </p>
 
-        <div class="qr-frame">
-          <img id="upiQr" src="" alt="PhonePe QR Code">
+        <div style="background: #eff6ff; border: 1px dashed #93c5fd; padding: 12px; border-radius: 12px; margin: 12px 0; font-size: 13px; text-align: left;">
+          <i class="fas fa-circle-info" style="color: #0284c7;"></i> <strong>महत्त्वाची सूचना:</strong> कार्ड डाउनलोडसाठी प्रति कार्ड ₹१० कपात होतील. पोर्टल उघडल्यावर तुम्ही थेट काम सुरू करू शकता.
         </div>
 
-        <div style="font-weight: 800; font-size: 15px; color: #0f172a; margin-bottom: 6px;">
-          UPI ID: <span style="color: #5f259f;">ravi.kannor@ybl</span>
-        </div>
-
-        <div>
-          <a id="phonepeAppLink" href="#" class="btn-phonepe-app">
-            <i class="fas fa-mobile-screen"></i> थेट PhonePe / GPay वरून भरा
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center; margin-top: 15px;">
+          <a id="btnPortalRedirect" href="https://lotusiti-pi.vercel.app/" target="_blank" class="btn-portal-redirect">
+            <i class="fas fa-external-link-alt"></i> थेट पोर्टलवर लॉगिन करा (Open Portal)
+          </a>
+          <a id="btnWaRegisterNotify" href="#" target="_blank" class="btn-wa-confirm-direct">
+            <i class="fab fa-whatsapp"></i> नोंदणी डिटेल्स WhatsApp वर शेअर करा
           </a>
         </div>
-
-        <hr style="margin: 16px 0; border: none; border-top: 1px dashed #cbd5e1;">
-
-        <p style="font-size: 13px; color: #334155; font-weight: 700; margin-bottom: 8px;">
-          पेमेंट झाल्यानंतर खालील बटनावर क्लिक करून सर्व तपशील व स्क्रीनशॉट WhatsApp वर पाठवा:
-        </p>
-
-        <a id="whatsappConfirmBtn" href="#" target="_blank" class="btn-send-wa-final">
-          <i class="fab fa-whatsapp" style="font-size: 20px;"></i> तपशील व स्क्रीनशॉट WhatsApp वर पाठवा
-        </a>
       </div>
 
     </div>
   </div>
 
+  <!-- MODAL 2: Wallet Recharge / Add Balance -->
+  <div class="modal-overlay" id="walletModal" onclick="closeModalOnOutside(event, 'walletModal')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('walletModal')"><i class="fas fa-times"></i></button>
+
+      <div class="modal-header" style="text-align: center;">
+        <h3><i class="fas fa-wallet" style="color: #10b981;"></i> पोर्टल वॉलेट रिचार्ज करा</h3>
+        <p>खालील PhonePe QR स्कॅन करून पैसे भरा. १ ते ५ मिनिटात बॅलन्स जमा होईल.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <div class="qr-container">
+          <img id="walletQrImg" src="" alt="PhonePe QR Code">
+        </div>
+        <div style="font-weight: 800; font-size: 15px; color: #0f172a;">
+          PhonePe UPI ID: <span style="color: #5f259f;">ravi.kannor@ybl</span>
+        </div>
+      </div>
+
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 10px; margin: 14px 0; font-size: 13px; color: #166534;">
+        <i class="fas fa-info-circle"></i> <strong>दर:</strong> शेतकरी आयडी व बांधकाम कामगार कार्ड डाउनलोड करण्यासाठी प्रति कार्ड <strong>₹१०</strong> बॅलन्स कपात होईल.
+      </div>
+
+      <form onsubmit="handleRechargeSubmit(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>तुमचा रजिस्टर ईमेल आयडी *</label>
+            <input type="email" id="recEmail" placeholder="उदा. rahul@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label>रिचार्ज रक्कम (₹ Amount) *</label>
+            <input type="number" id="recAmount" placeholder="उदा. 100, 200, 500" min="50" required>
+          </div>
+          <div class="form-group full">
+            <label>UTR Number / Transaction ID *</label>
+            <input type="text" id="recUtr" placeholder="उदा. 429381XXXXXX (12 अंकी UTR)" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit-reg" style="background: linear-gradient(135deg, #10b981, #059669); margin-top: 14px;">
+          <i class="fab fa-whatsapp"></i> UTR सबमिट करा व WhatsApp वर रिक्वेस्ट पाठवा
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- FLOATING SMART AI CHATBOT -->
-  <div class="chatbot-float-btn" onclick="toggleChatWindow()">
+  <div class="chatbot-float" onclick="toggleChat()">
     <i class="fas fa-robot" style="font-size: 18px; color: #facc15;"></i> लोटस स्मार्ट मदतनीस
   </div>
 
   <div class="chat-window" id="chatWindow">
     <div class="chat-header">
-      <h4><i class="fas fa-robot" style="color: #facc15;"></i> लोटस सेवा मदतनीस (AI Assistant)</h4>
-      <button class="chat-close" onclick="toggleChatWindow()"><i class="fas fa-times"></i></button>
+      <h4 style="font-size: 14px; font-weight: 800;"><i class="fas fa-robot" style="color: #facc15;"></i> लोटस सेवा मदतनीस</h4>
+      <button onclick="toggleChat()" style="background:none; border:none; color:white; font-size:16px; cursor:pointer;"><i class="fas fa-times"></i></button>
     </div>
 
     <div class="chat-body" id="chatBody">
       <div class="msg msg-bot">
-        नमस्कार! मी लोटस केंद्राचा स्मार्ट मदतनीस आहे. तुम्हाला कोणत्या सेवेबद्दल माहिती हवी आहे? खालील बटनावर क्लिक करा किंवा नाव टाईप करा:
-        <div class="quick-chips">
-          <button class="chip-btn" onclick="botAnswer('पॅन कार्ड')">पॅन कार्ड</button>
-          <button class="chip-btn" onclick="botAnswer('उत्पन्न दाखला')">उत्पन्न दाखला</button>
-          <button class="chip-btn" onclick="botAnswer('महासारथी')">महासारथी</button>
-          <button class="chip-btn" onclick="botAnswer('बांधकाम कामगार')">बांधकाम कामगार</button>
-          <button class="chip-btn" onclick="botAnswer('लोन')">लोन</button>
+        नमस्कार! लोटस केंद्रामध्ये आपले स्वागत आहे. अचूक कागदपत्रे व माहितीसाठी खालील सेवेवर क्लिक करा किंवा नाव टाईप करा:
+        <div class="chat-chips">
+          <button class="chip" onclick="askBot('महा आयडी')">महा आयडी</button>
+          <button class="chip" onclick="askBot('महिला शेतकरी')">महिला शेतकरी</button>
+          <button class="chip" onclick="askBot('पॅन कार्ड')">पॅन कार्ड</button>
+          <button class="chip" onclick="askBot('आधार अपडेट')">आधार अपडेट</button>
+          <button class="chip" onclick="askBot('मतदान')">मतदान नोंदणी</button>
+          <button class="chip" onclick="askBot('ncmc')">NCMC कार्ड</button>
+          <button class="chip" onclick="askBot('उत्पन्न')">उत्पन्न दाखला</button>
+          <button class="chip" onclick="askBot('lms')">Aadhaar LMS</button>
         </div>
       </div>
     </div>
 
     <div class="chat-footer">
-      <input type="text" id="chatInput" placeholder="उदा. उत्पन्न दाखला कागदपत्रे..." onkeypress="handleChatEnter(event)">
-      <button onclick="sendUserMessage()"><i class="fas fa-paper-plane"></i></button>
+      <input type="text" id="chatInput" placeholder="उदा. पॅन कार्ड, उत्पन्न..." onkeypress="if(event.key === 'Enter') sendChatMessage()">
+      <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 
   <script>
-    // Modal Controller
+    // Modal Helpers
     function openRegisterModal() {
       document.getElementById('regModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
-    function closeRegisterModal() {
-      document.getElementById('regModal').style.display = 'none';
+    function openWalletModal() {
+      const upiId = "ravi.kannor@ybl";
+      const upiLink = `upi://pay?pa=${upiId}&pn=Ravi%20Kannor&tn=CSC%20Wallet%20Recharge&cu=INR`;
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiLink)}`;
+      document.getElementById('walletQrImg').src = qrUrl;
+
+      document.getElementById('walletModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
       document.body.style.overflow = 'auto';
     }
-    function closeModalOnOutside(e) {
-      if (e.target.id === 'regModal') closeRegisterModal();
+    function closeModalOnOutside(e, id) {
+      if (e.target.id === id) closeModal(id);
     }
 
-    // Fixed WhatsApp Registration URL Generator
+    // Registration Handler + Portal Redirection
     function handleRegistrationSubmit(e) {
       e.preventDefault();
 
-      const name = document.getElementById('regName').value.trim();
-      const mobile = document.getElementById('regMobile').value.trim();
-      const email = document.getElementById('regEmail').value.trim() || 'N/A';
-      const center = document.getElementById('regCenter').value.trim();
-      const address = document.getElementById('regAddress').value.trim();
+      const fullName = document.getElementById('vleFullName').value.trim();
+      const mobile = document.getElementById('vleMobile').value.trim();
+      const email = document.getElementById('vleEmail').value.trim();
+      const password = document.getElementById('vlePassword').value.trim();
+      const center = document.getElementById('vleCenter').value.trim();
+      const address = document.getElementById('vleAddress').value.trim();
 
       const selected = [];
-      document.querySelectorAll('input[name="services"]:checked').forEach(cb => selected.push(cb.value));
+      document.querySelectorAll('input[name="vleServices"]:checked').forEach(cb => selected.push(cb.value));
       const srvList = selected.join(', ') || 'All 3 Services';
 
-      const upiId = "ravi.kannor@ybl";
-      const upiLink = `upi://pay?pa=${upiId}&pn=Ravi%20Kannor&tn=CSC%20Portal%20Registration&cu=INR`;
-
-      // QR Code
-      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiLink)}`;
-      document.getElementById('upiQr').src = qrUrl;
-      document.getElementById('phonepeAppLink').href = upiLink;
-
-      // Fixed: Plain text newline representation properly encoded for WhatsApp
+      // WhatsApp Message
       const rawText = 
-        `*New CSC VLE Portal Registration & Payment Confirmation*\n\n` +
-        `👤 Full Name: ${name}\n` +
+        `*New CSC VLE Portal Registration*\n\n` +
+        `👤 Full Name: ${fullName}\n` +
         `📱 Mobile No: ${mobile}\n` +
+        `📧 Login Email: ${email}\n` +
+        `🔑 Password: ${password}\n` +
         `🏢 Center Name: ${center}\n` +
-        `📍 Center Address: ${address}\n` +
-        `📧 Email: ${email}\n` +
-        `🛠️ Selected Services: ${srvList}\n` +
-        `💳 Payment Done via: PhonePe (UPI: ${upiId})\n` +
-        `✅ Payment Status: Successfully Paid (Screenshot attached below)\n\n` +
-        `Hello Ravi Sir, please verify my registration and activate my portal login.`;
+        `📍 Address: ${address}\n` +
+        `🛠️ Services: ${srvList}\n\n` +
+        `Hello Ravi Sir, I have registered for the CSC Card Portal. Please activate my account.`;
 
-      // Safe URL Encode for WhatsApp API
-      const whatsappUrl = `https://api.whatsapp.com/send?phone=917057163216&text=${encodeURIComponent(rawText)}`;
-      document.getElementById('whatsappConfirmBtn').href = whatsappUrl;
+      const waUrl = `https://api.whatsapp.com/send?phone=917057163216&text=${encodeURIComponent(rawText)}`;
+      document.getElementById('btnWaRegisterNotify').href = waUrl;
+      document.getElementById('dispEmail').textContent = email;
 
-      // Switch screen
-      document.getElementById('formScreen').style.display = 'none';
-      document.getElementById('paymentScreen').style.display = 'block';
+      // Switch to success & portal redirect
+      document.getElementById('stepForm').style.display = 'none';
+      document.getElementById('stepSuccess').style.display = 'block';
     }
 
-    // Auto Chatbot System
-    function toggleChatWindow() {
+    // Wallet Recharge Request Handler
+    function handleRechargeSubmit(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('recEmail').value.trim();
+      const amount = document.getElementById('recAmount').value.trim();
+      const utr = document.getElementById('recUtr').value.trim();
+
+      const rechargeText = 
+        `*CSC Portal Wallet Recharge Request*\n\n` +
+        `📧 User ID (Email): ${email}\n` +
+        `💰 Recharge Amount: ₹${amount}\n` +
+        `🔢 UTR / Transaction ID: ${utr}\n` +
+        `💳 Paid to UPI: ravi.kannor@ybl\n\n` +
+        `Sir, I have transferred ₹${amount}. Please add balance to my portal wallet. Screenshot attached below.`;
+
+      const rechargeWaUrl = `https://api.whatsapp.com/send?phone=917057163216&text=${encodeURIComponent(rechargeText)}`;
+      window.open(rechargeWaUrl, '_blank');
+      closeModal('walletModal');
+      alert("तुमची रिचार्ज विनंती व्हॉट्सॲपवर पाठवली आहे. १ ते ५ मिनिटांत बॅलन्स ॲड होईल.");
+    }
+
+    // Accurate Knowledge Base (As Per Actual Government / Center Rules)
+    const accurateKnowledge = {
+      'महा आयडी': 'महा आयडी व महासारथी योजनेसाठी आवश्यक कागदपत्रे: \n१) फक्त आधार कार्ड\n२) चालू मोबाईल नंबर',
+      'महिला शेतकरी': 'महिला शेतकरी सबलीकरण योजनेसाठी आवश्यक कागदपत्रे: \n१) फक्त आधार कार्ड',
+      'पॅन कार्ड': 'नवीन पॅन कार्ड काढण्यासाठी आवश्यक कागदपत्रे: \n१) फक्त आधार कार्ड (३ ते ५ दिवसात पॅन उपलब्ध)',
+      'आधार अपडेट': 'आधार अपडेट सेवा: \nआमच्याकडे आधार कार्डवरील मोबाईल नंबर अपडेट व पत्ता (Address) अपडेट करून मिळेल.',
+      'मतदान': 'मतदान कार्ड नवीन नोंदणीसाठी आवश्यक कागदपत्रे: \n१) आधार कार्ड\n२) १ पासपोर्ट फोटो\n३) आई व वडिलांचे मतदान कार्ड\n४) शाळा सोडल्याचा दाखला (TC)',
+      'ncmc': 'NCMC बस कार्ड नोंदणीसाठी आवश्यक कागदपत्रे: \n१) फक्त आधार कार्ड',
+      'उत्पन्न': 'उत्पन्न दाखल्यासाठी आवश्यक कागदपत्रे: \n१) आधार कार्ड\n२) रेशन कार्ड\n३) १ फोटो\n४) फॉर्म ६० (लागू असल्यास)',
+      'lms': 'Aadhaar LMS Certificate: \nआधार ऑपरेटर/सुपरवायझर LMS प्रमाणपत्र खात्रीशीर काढून मिळेल. त्वरित संपर्कासाठी खालील WhatsApp बटनावर क्लिक करा.',
+      'जात': 'जातीचा दाखला (Caste Certificate): \nआवश्यक कागदपत्रे: शाळा सोडल्याचा दाखला (TC), वडिलांचा जातीचा पुरावा, आधार कार्ड व रेशन कार्ड.',
+      'अधिवास': 'वय व अधिवास दाखला (Domicile): \nमहाराष्ट्राचे अधिकृत रहिवासी असल्याचे प्रमाणपत्र. शाळा सोडल्याचा दाखला, आधार कार्ड व १० वर्षांचा रहिवासी पुरावा.',
+      'नॉन क्रिमिलियर': 'नॉन क्रिमिलियर (NCL): \nमागील ३ वर्षांचे तहसील उत्पन्न दाखले, जात प्रमाणपत्र व आधार कार्ड.',
+      'रहिवासी': 'रहिवासी दाखला: \nलाईट बिल, रेशन कार्ड व आधार कार्ड.',
+      'आयुष्मान': 'आयुष्मान भारत कार्ड (₹५ लाख मोफत उपचार): \nरेशन कार्ड व आधार कार्ड.',
+      'आभा': 'आभा कार्ड (ABHA): \nफक्त आधार कार्ड व आधार लिंक मोबाईल नंबर.',
+      'e-श्रम': 'e-श्रम कार्ड: \nआधार कार्ड व बँक पासबुक.',
+      'शेती': 'MahaDBT शेती योजना: \nठिबक, तुषार, पाईप व अवजारे अनुदानासाठी ७/१२, ८-अ व बँक पासबुक.',
+      'शालेय': 'शालेय शिष्यवृत्ती: \nमहाडीबीटी स्कॉलरशिप, स्वाधार योजना व इतर शासकीय शिष्यवृत्ती फॉर्म भरून मिळतात.',
+      'नोकरी': 'नोकरी भरती: \nपोलीस, तलाठी, रेल्वे, आर्मी, पोस्ट व सर्व स्पर्धा परीक्षांचे अर्ज भरून मिळतील.',
+      '७/१२': '७/१२ व ८-अ: \nडिजिटल स्वाक्षरीचे कायदेशीर मान्य ७/१२, ८-अ व फेरफार त्वरित मिळतील.',
+      'इन्शुरन्स': 'वाहन इन्शुरन्स: \nसर्व प्रकारच्या २ व्हीलर व ४ व्हीलर गाड्यांचे इन्शुरन्स अवघ्या १ मिनिटात काढून मिळतील.',
+      'पासपोर्ट': 'पासपोर्ट व व्हिझा: \nनवीन पासपोर्ट अपॉइंटमेंट, अर्ज व व्हिझा प्रोसेस केली जाते.',
+      'pvc': 'PVC स्मार्ट कार्ड: \nआधार, पॅन, मतदान कार्ड, ड्रायव्हिंग लायसन्स हाय-क्वालिटी पीव्हीसी प्रिंट.',
+      'फोटो': 'अर्जंट पासपोर्ट फोटो: \nशासकीय कामांसाठी ५ मिनिटांत फोटो काढून मिळतील.',
+      'लोन': 'लोन सुविधा: \nमुद्रा लोन, पर्सनल लोन, बिझनेस लोन व शेती कर्जासाठी मार्गदर्शन उपलब्ध.'
+    };
+
+    // Chatbot Controller
+    function toggleChat() {
       const w = document.getElementById('chatWindow');
       w.style.display = (w.style.display === 'flex') ? 'none' : 'flex';
     }
 
-    function askBotForService(serviceName) {
-      const w = document.getElementById('chatWindow');
-      w.style.display = 'flex';
-      botAnswer(serviceName);
+    function askBot(key) {
+      toggleChat();
+      document.getElementById('chatWindow').style.display = 'flex';
+      sendBotAnswer(key);
     }
 
-    const botKnowledge = {
-      'महा आयडी': 'महा आयडी व महासारथी: स्पर्धा परीक्षा, प्रशिक्षण व शासकीय योजनांच्या लाभासाठी ही नोंदणी केली जाते. आवश्यक कागदपत्रे: आधार कार्ड, जात प्रमाणपत्र, फोटो व सही.',
-      'महिला शेतकरी': 'महिला शेतकरी सबलीकरण योजना: महिला शेतकऱ्यांना शेती अवजारे, अनुदान व कौशल्य विकासासाठी मदत. आवश्यक: आधार कार्ड, ७/१२, बँक पासबुक.',
-      'पॅन कार्ड': 'नवीन पॅन कार्ड / दुरुस्ती: नवीन पॅन अवघ्या ३ ते ५ दिवसात ईमेलवर मिळते. आवश्यक: आधार कार्ड व २ पासपोर्ट फोटो.',
-      'आधार कार्ड': 'आधार सेवा: पत्ता बदलणे, मोबाईल नंबर जोडणे किंवा अपडेट करणे केंद्रावर केले जाते. बायोमेट्रिक पडताळणी आवश्यक.',
-      'मतदान कार्ड': 'मतदान कार्ड: नवीन मतदार नोंदणी (फॉर्म ६), नाव/पत्ता दुरुस्ती (फॉर्म ८) व नवीन स्मार्ट कार्ड प्रिंट सुविधा उपलब्ध.',
-      'ncmc': 'NCMC स्मार्ट कार्ड: एसटी बस प्रवास सवलत व मेट्रो प्रवासासाठी १ कार्ड. आवश्यक: आधार कार्ड व चालू मोबाईल नंबर.',
-      'उत्पन्न': 'उत्पन्न दाखला: १ वर्ष किंवा ३ वर्षांचा तहसील दाखला मिळतो. आवश्यक: रेशन कार्ड, आधार कार्ड, तलाठी अहवाल किंवा स्वयंघोषणापत्र.',
-      'जात': 'जातीचा दाखला (Caste Certificate): शैक्षणिक व नोकरीसाठी आवश्यक. आवश्यक: शाळा सोडल्याचा दाखला (TC), वडिलांचा जातीचा पुरावा (१९६७ पूर्वीचा पुरावा लागू असल्यास).',
-      'वय': 'वय व अधिवास (Domicile): महाराष्ट्राचे रहिवासी असल्याचा अधिकृत दाखला. आवश्यक: १० वर्षांचा रहिवासी पुरावा, जन्म दाखला किंवा TC, रेशन कार्ड.',
-      'नॉन क्रिमिलियर': 'नॉन क्रिमिलियर (NCL): ओबीसी/एसबीसी प्रवर्गासाठी आवश्यक. आवश्यक: मागील ३ वर्षांचे उत्पन्न दाखले व जात प्रमाणपत्र.',
-      'रहिवासी': 'रहिवासी दाखला: रहिवासी पुरावा म्हणून विविध शासकीय कामांसाठी उपयोगी. आवश्यक: लाईट बिल, रेशन कार्ड व आधार कार्ड.',
-      'आयुष्मान': 'आयुष्मान भारत कार्ड: प्रति कुटुंब दरवर्षी ₹५ लाखांपर्यंत मोफत उपचार. रेशन कार्ड व आधार कार्डवर त्वरित निघते.',
-      'आभा': 'आभा कार्ड (ABHA): डिजिटल हेल्थ कार्ड. सर्व वैद्यकीय रेकॉर्ड ऑनलाइन ठेवण्यासाठी. आधार OTP द्वारे त्वरित निघते.',
-      'e-श्रम': 'e-श्रम कार्ड: असंघटित कामगारांसाठी भारत सरकारचे कार्ड. अपघाती विमा व सरकारी योजनांसाठी. आधार व बँक पासबुक हवे.',
-      'शेती': 'MahaDBT शेती योजना: ठिबक सिंचन, तुषार, ट्रॅक्टर व पाईप अनुदानासाठी ऑनलाइन अर्ज केंद्रावर भरून मिळतात.',
-      'शालेय': 'शालेय शिष्यवृत्ती: महाडीबीटी स्कॉलरशिप, स्वाधार योजना व इतर शासकीय शिष्यवृत्ती फॉर्म भरून मिळतात.',
-      'नोकरी': 'नोकरी भरती: पोलीस भरती, तलाठी, रेल्वे, आर्मी व एमपीएससी सर्व ऑनलाइन अर्ज अचूक भरून मिळतात.',
-      '७/१२': '७/१२ व ८-अ: डिजिटल स्वाक्षरीचे कायदेशीर मान्य ७/१२ खाते उतारे व फेरफार त्वरित काढून दिले जातात.',
-      'इन्शुरन्स': 'वाहन इन्शुरन्स: सर्व प्रकारच्या २ व्हीलर व ४ व्हीलर गाड्यांचे इन्शुरन्स १ मिनिटात काढून मिळतात.',
-      'पासपोर्ट': 'पासपोर्ट व व्हिझा: नवीन पासपोर्ट अपॉइंटमेंट, पोलीस पडताळणी अर्ज व व्हिझा प्रोसेस केली जाते.',
-      'pvc': 'PVC स्मार्ट कार्ड: आधार, पॅन, मतदान, ड्रायव्हिंग लायसन्सचे हाय-क्वालिटी वॉटरप्रूफ स्मार्ट कार्ड प्रिंट केले जातात.',
-      'फोटो': 'अर्जंट पासपोर्ट फोटो: सर्व प्रकारच्या शासकीय कामांसाठी अवघ्या ५ मिनिटांत फोटो काढून मिळतील.',
-      'लोन': 'लोन सुविधा: मुद्रा लोन, पर्सनल लोन, बिझनेस लोन व शेती कर्जासाठी आवश्यक कागदपत्रे व मार्गदर्शन केंद्रावर उपलब्ध आहे.',
-      'बांधकाम': 'बांधकाम कामगार कल्याणकारी योजना: नोंदीत कामगारांना शैक्षणिक मदत, घरकुल अनुदान व सुरक्षा किट मिळते. केंद्रावर स्मार्ट कार्ड बनवून मिळते.'
-    };
+    function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      sendBotAnswer(text);
+    }
 
-    function botAnswer(query) {
-      appendUserMessage(query);
+    function sendBotAnswer(query) {
+      appendMsg(query, 'msg-user');
 
       setTimeout(() => {
         let matched = false;
         const qLower = query.toLowerCase();
 
-        for (const [key, answer] of Object.entries(botKnowledge)) {
+        for (const [key, ans] of Object.entries(accurateKnowledge)) {
           if (qLower.includes(key.toLowerCase())) {
-            appendBotMessage(answer);
+            appendMsg(ans, 'msg-bot');
             matched = true;
             break;
           }
         }
 
         if (!matched) {
-          appendBotMessage(`या सेवेबद्दल अधिक माहितीसाठी किंवा त्वरित अर्ज करण्यासाठी केंद्राशी संपर्क साधा. प्रो. रवी कन्नोर: 7057163216.`);
+          appendMsg("या सेवेच्या अधिक माहितीसाठी किंवा अर्ज करण्यासाठी थेट केंद्रावर भेटा किंवा रवी सरांशी संपर्क साधा (7057163216).", 'msg-bot');
         }
-      }, 350);
+      }, 300);
     }
 
-    function appendUserMessage(text) {
+    function appendMsg(text, className) {
       const body = document.getElementById('chatBody');
       const div = document.createElement('div');
-      div.className = 'msg msg-user';
-      div.textContent = text;
+      div.className = `msg ${className}`;
+      div.innerText = text;
+
+      if (className === 'msg-bot') {
+        const waLink = document.createElement('a');
+        waLink.href = `https://wa.me/917057163216?text=${encodeURIComponent('Namaskar Ravi Sir, mala yachyababat arj karaycha aahe: ' + text.slice(0, 40))}`;
+        waLink.target = '_blank';
+        waLink.style.display = 'inline-block';
+        waLink.style.marginTop = '6px';
+        waLink.style.color = '#0284c7';
+        waLink.style.fontWeight = '700';
+        waLink.innerHTML = '👉 WhatsApp वर अर्ज करा';
+        div.appendChild(waLink);
+      }
+
       body.appendChild(div);
       body.scrollTop = body.scrollHeight;
-    }
-
-    function appendBotMessage(text) {
-      const body = document.getElementById('chatBody');
-      const div = document.createElement('div');
-      div.className = 'msg msg-bot';
-      div.innerHTML = text + `<br><a href="https://wa.me/917057163216?text=${encodeURIComponent('Namaskar Ravi Sir, mala yachyababat arj karaycha aahe: ' + text.slice(0, 30))}" target="_blank" style="color: #0284c7; font-weight: 700; text-decoration: underline; display: inline-block; margin-top: 6px;">👉 WhatsApp वर अर्ज करा</a>`;
-      body.appendChild(div);
-      body.scrollTop = body.scrollHeight;
-    }
-
-    function sendUserMessage() {
-      const input = document.getElementById('chatInput');
-      const text = input.value.trim();
-      if (!text) return;
-      input.value = '';
-      botAnswer(text);
-    }
-
-    function handleChatEnter(e) {
-      if (e.key === 'Enter') sendUserMessage();
     }
   </script>
 
