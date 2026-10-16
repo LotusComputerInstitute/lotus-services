@@ -8,10 +8,10 @@
   <!-- High-Tech Microchip Glow Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='chip' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f2fe'/><stop offset='50%25' stop-color='%2338ef7d'/><stop offset='100%25' stop-color='%23ff007f'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='%230a0f1d'/><rect x='20' y='20' width='60' height='60' rx='14' fill='none' stroke='url(%23chip)' stroke-width='6'/><circle cx='50' cy='50' r='14' fill='url(%23chip)'/><path d='M50 8v12M50 80v12M8 50h12M80 50h12' stroke='url(%23chip)' stroke-width='5' stroke-linecap='round'/></svg>">
 
-  <!-- Calligraphy & Clean Unicode Fonts -->
+  <!-- Clean Marathi Font Engine (Zero Breakage) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -19,8 +19,8 @@
       --primary: #2563eb;
       --accent: #f59e0b;
       --emerald: #10b981;
-      --dark-card: #0d1527;
-      --border-glow: rgba(56, 189, 248, 0.3);
+      --border-subtle: #e2e8f0;
+      --slate-text: #475569;
     }
 
     * {
@@ -28,11 +28,12 @@
       margin: 0;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
-      font-feature-settings: "liga" 1;
+      font-feature-settings: "liga" 1, "dlig" 1;
+      text-rendering: optimizeLegibility;
     }
 
     body {
-      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Mukta', 'Plus Jakarta Sans', sans-serif;
       background: radial-gradient(circle at 10% 10%, #0d1b2a 0%, #1e1b4b 35%, #064e3b 75%, #022c22 100%);
       background-attachment: fixed;
       color: #0f172a;
@@ -134,7 +135,6 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 20px;
-      position: relative;
     }
     .brand-left-box {
       flex: 1;
@@ -159,16 +159,16 @@
       gap: 6px;
     }
     .brand-title-wrap h1 {
-      font-family: 'Rozha One', cursive;
       font-size: 38px;
+      font-weight: 800;
       color: #b91c1c;
-      line-height: 1.2;
+      line-height: 1.25;
       margin-bottom: 4px;
-      text-shadow: 0 2px 4px rgba(185, 28, 28, 0.12);
+      letter-spacing: -0.2px;
     }
     .brand-title-wrap h2 {
-      font-family: 'Yatra One', cursive;
-      font-size: 21px;
+      font-size: 22px;
+      font-weight: 700;
       color: #0369a1;
       margin-bottom: 10px;
     }
@@ -204,7 +204,7 @@
       box-shadow: 0 10px 25px rgba(2, 132, 199, 0.55);
     }
 
-    /* CSC VLE Multi-Service Card */
+    /* CSC VLE Multi-Service Banner */
     .vle-hero-banner {
       background: radial-gradient(circle at 85% 15%, #1e1b4b 0%, #0a1122 85%);
       color: #ffffff;
@@ -222,13 +222,14 @@
       flex-wrap: wrap;
     }
     .vle-left h3 {
-      font-family: 'Yatra One', cursive;
-      font-size: 28px;
+      font-size: 27px;
+      font-weight: 800;
       color: #facc15;
       margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 10px;
+      letter-spacing: 0.2px;
     }
     .vle-left p {
       font-size: 14px;
@@ -247,7 +248,7 @@
       padding: 14px 26px;
       border-radius: 50px;
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 800;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -304,7 +305,7 @@
       padding: 6px 8px;
       color: white;
       font-size: 8px;
-      font-weight: 900;
+      font-weight: 800;
       box-shadow: 0 4px 14px rgba(0,0,0,0.35);
       flex-shrink: 0;
       position: relative;
@@ -351,7 +352,7 @@
     }
     .section-title-wrap h3 {
       font-size: 24px;
-      font-weight: 900;
+      font-weight: 800;
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -399,7 +400,7 @@
       background: #16a34a;
       color: #ffffff;
       font-size: 9px;
-      font-weight: 900;
+      font-weight: 800;
       padding: 2px 7px;
       border-radius: 20px;
     }
@@ -431,7 +432,7 @@
       font-weight: 700;
     }
 
-    /* Vibrant Color Palettes */
+    /* Colors */
     .ic-green { background: linear-gradient(135deg, #10b981, #059669); }
     .ic-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
     .ic-cyan { background: linear-gradient(135deg, #06b6d4, #0e7490); }
@@ -459,7 +460,7 @@
     }
     .footer-info h4 {
       font-size: 21px;
-      font-weight: 900;
+      font-weight: 800;
       color: #0f172a;
       margin-bottom: 6px;
       display: flex;
@@ -468,7 +469,7 @@
     }
     .footer-info p {
       font-size: 14px;
-      color: #475569;
+      color: var(--slate-text);
       margin-bottom: 4px;
     }
     .footer-actions {
@@ -532,12 +533,12 @@
     }
     .modal-header h3 {
       font-size: 22px;
-      font-weight: 900;
+      font-weight: 800;
       color: #0f172a;
     }
     .modal-header p {
       font-size: 13px;
-      color: #475569;
+      color: var(--slate-text);
       margin: 4px 0 16px 0;
     }
     .form-grid {
@@ -574,7 +575,7 @@
     }
     .service-chk-box {
       background: #f8fafc;
-      border: 1px solid #e2e8f0;
+      border: 1px solid var(--border-subtle);
       border-radius: 14px;
       padding: 14px;
       margin: 14px 0;
@@ -630,7 +631,7 @@
       cursor: pointer;
     }
 
-    /* Modal Step 2 Success & WhatsApp Verification Flow */
+    /* Modal Step 2 Success */
     #stepSuccess {
       display: none;
       text-align: center;
@@ -830,7 +831,7 @@
       </div>
     </header>
 
-    <!-- CSC VLE Multi-Service Banner with Live Card Previews -->
+    <!-- CSC VLE Multi-Service Banner -->
     <section class="vle-hero-banner">
       <div class="vle-top-info">
         <div class="vle-left">
@@ -879,7 +880,7 @@
       <p>माहितीसाठी सेवेवर क्लिक करा; आमचा स्मार्ट मदतनीस तुम्हाला अचूक कागदपत्रे सांगेल.</p>
     </div>
 
-    <!-- 24 Services Grid (Click opens accurate Chatbot) -->
+    <!-- 24 Services Grid -->
     <div class="services-grid">
 
       <div class="service-card priority-gold" onclick="askBot('महा आयडी')">
@@ -1107,7 +1108,7 @@
 
   </div>
 
-  <!-- MODAL 1: CSC VLE Registration (Auto ₹149 Payment + WhatsApp Only Link Release) -->
+  <!-- MODAL 1: CSC VLE Registration -->
   <div class="modal-overlay" id="regModal" onclick="closeModalOnOutside(event, 'regModal')">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('regModal')"><i class="fas fa-times"></i></button>
@@ -1171,9 +1172,9 @@
         </form>
       </div>
 
-      <!-- Step 2: Payment ₹149 with UPI Icons -->
+      <!-- Step 2: Payment ₹149 -->
       <div id="stepSuccess">
-        <h3 style="color: #0f172a; font-size: 20px; font-weight: 900;">
+        <h3 style="color: #0f172a; font-size: 20px; font-weight: 800;">
           <i class="fas fa-qrcode" style="color: #f59e0b;"></i> पोर्टल ॲक्टिव्हेशन फी: ₹149
         </h3>
         <p style="font-size: 13px; color: #475569; margin: 4px 0 10px 0;">
@@ -1188,7 +1189,7 @@
           UPI ID: <span style="color: #5f259f;">ravi.kannor@ybl</span>
         </div>
 
-        <!-- UPI Apps Direct Click Buttons -->
+        <!-- UPI Apps Row -->
         <div class="upi-apps-row">
           <a id="btnPayPhonePe" href="#" class="upi-chip"><i class="fas fa-mobile-screen" style="color:#5f259f;"></i> PhonePe</a>
           <a id="btnPayGPay" href="#" class="upi-chip"><i class="fab fa-google" style="color:#ea4335;"></i> GPay</a>
@@ -1208,7 +1209,7 @@
     </div>
   </div>
 
-  <!-- MODAL 2: Wallet Recharge (Variable Amount) -->
+  <!-- MODAL 2: Wallet Recharge -->
   <div class="modal-overlay" id="walletModal" onclick="closeModalOnOutside(event, 'walletModal')">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('walletModal')"><i class="fas fa-times"></i></button>
@@ -1310,7 +1311,7 @@
       if (e.target.id === id) closeModal(id);
     }
 
-    // Registration Handler with Auto ₹149 UPI Deep Link
+    // Registration Handler with Auto ₹149 UPI Link
     function handleRegistrationSubmit(e) {
       e.preventDefault();
 
@@ -1325,21 +1326,17 @@
       document.querySelectorAll('input[name="vleServices"]:checked').forEach(cb => selected.push(cb.value));
       const srvList = selected.join(', ') || 'All 3 Services';
 
-      // 149 INR Fixed Deep Link
       const upiId = "ravi.kannor@ybl";
       const upi149Link = `upi://pay?pa=${upiId}&pn=Ravi%20Kannor&am=149&cu=INR&tn=CSC%20Portal%20Registration%20149`;
 
-      // Generate Auto 149 QR
       const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upi149Link)}`;
       document.getElementById('regQrImg').src = qrUrl;
 
-      // Set App Links
       document.getElementById('btnPayPhonePe').href = upi149Link;
       document.getElementById('btnPayGPay').href = upi149Link;
       document.getElementById('btnPayPaytm').href = upi149Link;
       document.getElementById('btnPayBHIM').href = upi149Link;
 
-      // Complete WhatsApp Payload
       const rawText = 
         `*New CSC VLE Portal Registration Request (₹149 Paid)*\n\n` +
         `👤 Full Name: ${fullName}\n` +
@@ -1355,7 +1352,6 @@
       const waUrl = `https://api.whatsapp.com/send?phone=917057163216&text=${encodeURIComponent(rawText)}`;
       document.getElementById('btnWaRegisterNotify').href = waUrl;
 
-      // Switch to Payment Screen
       document.getElementById('stepForm').style.display = 'none';
       document.getElementById('stepSuccess').style.display = 'block';
     }
