@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>लोटस कॉम्प्युटर इन्स्टिट्यूट व आपले सरकार सेवा केंद्र | CSC VLE पोर्टल</title>
+  <title>लोटस कॉम्प्युटर ऑनलाइन सर्व्हिसेस | CSC VLE मित्र</title>
   
-  <!-- High-Tech Computer Microchip Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='techG' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2306b6d4'/><stop offset='50%25' stop-color='%233b82f6'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090d16'/><rect x='16' y='18' width='68' height='48' rx='8' fill='none' stroke='url(%23techG)' stroke-width='6'/><path d='M34 80h32M50 66v14' stroke='url(%23techG)' stroke-width='6' stroke-linecap='round'/><circle cx='50' cy='42' r='10' fill='url(%23techG)'/><circle cx='34' cy='42' r='3' fill='%2306b6d4'/><circle cx='66' cy='42' r='3' fill='%238b5cf6'/></svg>">
+  <!-- Modern Computer Microchip Tech Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='chip' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f2fe'/><stop offset='50%25' stop-color='%234facfe'/><stop offset='100%25' stop-color='%236b21a8'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='%230b0f19'/><rect x='20' y='20' width='60' height='60' rx='14' fill='none' stroke='url(%23chip)' stroke-width='6'/><circle cx='50' cy='50' r='14' fill='url(%23chip)'/><path d='M50 8v12M50 80v12M8 50h12M80 50h12' stroke='url(%23chip)' stroke-width='5' stroke-linecap='round'/></svg>">
 
-  <!-- Noto Sans Devanagari for clean Unicode ligatures -->
+  <!-- Royal Calligraphy & Tech Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
       --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --secondary: #06b6d4;
+      --primary-dark: #1d4ed8;
       --accent: #f59e0b;
-      --dark-bg: #090d16;
+      --accent-hover: #d97706;
+      --bg-dark: #0b0f19;
       --card-bg: #ffffff;
-      --border: #e2e8f0;
-      --slate: #475569;
-      --success: #16a34a;
+      --border-subtle: #e2e8f0;
+      --slate-text: #475569;
+      --emerald: #10b981;
     }
 
     * {
@@ -37,10 +37,10 @@
 
     body {
       font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
-      background: #f8fafc;
+      background: radial-gradient(circle at 15% 15%, #f1f5f9 0%, #e2e8f0 100%);
       color: #0f172a;
       line-height: 1.6;
-      padding-bottom: 70px;
+      padding-bottom: 80px;
     }
 
     .container {
@@ -49,18 +49,18 @@
       padding: 0 16px;
     }
 
-    /* Top Glowing Announcement Bar */
+    /* Top Sticky Bar */
     .top-announcement {
-      background: linear-gradient(90deg, #090d16 0%, #1e1b4b 50%, #0369a1 100%);
+      background: linear-gradient(90deg, #0b0f19 0%, #1e1b4b 50%, #0369a1 100%);
       color: #ffffff;
       padding: 10px 16px;
       font-size: 13px;
       font-weight: 600;
       position: sticky;
       top: 0;
-      z-index: 99;
+      z-index: 100;
       border-bottom: 2px solid var(--accent);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     .top-content {
       max-width: 1140px;
@@ -75,18 +75,18 @@
       background: rgba(245, 158, 11, 0.2);
       border: 1px solid var(--accent);
       color: #fef08a;
-      padding: 3px 10px;
+      padding: 3px 12px;
       border-radius: 20px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      animation: pulseGlow 2s infinite;
+      gap: 6px;
+      animation: pulseAlert 2.5s infinite;
     }
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.03); }
+    @keyframes pulseAlert {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.03); opacity: 0.85; }
     }
     .top-actions {
       display: flex;
@@ -123,11 +123,11 @@
     /* Hero Brand Banner */
     .hero-card {
       background: #ffffff;
-      border-radius: 24px;
-      padding: 28px 24px;
-      margin: 20px auto 25px auto;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 32px 28px;
+      margin: 22px auto 26px auto;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+      border: 1px solid var(--border-subtle);
       border-top: 6px solid var(--primary);
     }
     .gov-badge-row {
@@ -140,10 +140,10 @@
       background: #f8fafc;
       border: 1px solid #cbd5e1;
       color: #334155;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 50px;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -155,49 +155,54 @@
     }
 
     .brand-title-wrap h1 {
-      font-size: 32px;
-      font-weight: 900;
+      font-family: 'Rozha One', cursive;
+      font-size: 38px;
       color: #b91c1c;
-      line-height: 1.25;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
       margin-bottom: 4px;
+      text-shadow: 0 2px 4px rgba(185, 28, 28, 0.08);
     }
     .brand-title-wrap h2 {
+      font-family: 'Yatra One', cursive;
       font-size: 21px;
-      font-weight: 800;
-      color: #0284c7;
-      margin-bottom: 8px;
-    }
-    .bank-csp-tag {
-      display: inline-block;
-      background: #e0f2fe;
       color: #0369a1;
-      padding: 6px 14px;
-      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .vle-friend-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      color: #1e40af;
+      padding: 7px 18px;
+      border-radius: 50px;
       font-weight: 800;
-      font-size: 13px;
-      border: 1px solid #bae6fd;
+      font-size: 14px;
+      border: 1.5px solid #bfdbfe;
     }
 
     /* CSC VLE Multi-Service Card */
     .vle-hero-banner {
-      background: radial-gradient(circle at top right, #1e1b4b, #090d16);
+      background: radial-gradient(circle at 85% 15%, #1e1b4b 0%, #090d16 80%);
       color: #ffffff;
-      border-radius: 24px;
-      padding: 28px 24px;
+      border-radius: 26px;
+      padding: 32px 28px;
       margin-bottom: 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      gap: 25px;
       flex-wrap: wrap;
       border: 2px solid var(--accent);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
     }
     .vle-left h3 {
-      font-size: 24px;
+      font-family: 'Yatra One', cursive;
+      font-size: 26px;
       color: #facc15;
-      font-weight: 900;
       margin-bottom: 8px;
+      letter-spacing: 0.5px;
     }
     .vle-left p {
       font-size: 14px;
@@ -208,11 +213,12 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-top: 14px;
+      margin-top: 15px;
     }
     .vle-tag-item {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       padding: 6px 14px;
       border-radius: 50px;
       font-size: 13px;
@@ -237,6 +243,11 @@
       align-items: center;
       gap: 8px;
       box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+      transition: all 0.25s;
+    }
+    .btn-register-vle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.6);
     }
     .btn-wallet-top {
       background: linear-gradient(135deg, #10b981, #059669);
@@ -264,38 +275,38 @@
     .section-title-wrap h3 {
       font-size: 22px;
       font-weight: 900;
-      color: var(--dark-bg);
+      color: #0f172a;
       display: flex;
       align-items: center;
       gap: 8px;
     }
     .section-title-wrap p {
       font-size: 13px;
-      color: var(--slate);
+      color: var(--slate-text);
     }
 
-    /* Services Grid (Clickable for Chatbot) */
+    /* Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 14px;
+      gap: 16px;
     }
     .service-card {
       background: var(--card-bg);
-      border-radius: 18px;
-      padding: 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       cursor: pointer;
       position: relative;
-      transition: all 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .service-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.09);
       border-color: #cbd5e1;
     }
     .service-card.priority-gold {
@@ -314,13 +325,13 @@
       border-radius: 20px;
     }
     .s-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 19px;
+      font-size: 20px;
       color: #ffffff;
       flex-shrink: 0;
     }
@@ -355,11 +366,11 @@
     /* Footer Contact Card */
     .footer-contact-card {
       background: #ffffff;
-      border-radius: 24px;
-      padding: 30px 24px;
+      border-radius: 26px;
+      padding: 32px 26px;
       margin-top: 40px;
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -367,14 +378,17 @@
       flex-wrap: wrap;
     }
     .footer-info h4 {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 900;
       color: #0f172a;
       margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .footer-info p {
       font-size: 14px;
-      color: var(--slate);
+      color: var(--slate-text);
       margin-bottom: 4px;
     }
     .footer-actions {
@@ -383,7 +397,7 @@
       flex-wrap: wrap;
     }
     .btn-contact-act {
-      padding: 10px 18px;
+      padding: 11px 20px;
       border-radius: 50px;
       font-size: 13px;
       font-weight: 800;
@@ -402,8 +416,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(6px);
+      background: rgba(11, 15, 25, 0.78);
+      backdrop-filter: blur(8px);
       display: none;
       align-items: center;
       justify-content: center;
@@ -412,20 +426,20 @@
     }
     .modal-box {
       background: #ffffff;
-      border-radius: 24px;
-      max-width: 600px;
+      border-radius: 26px;
+      max-width: 580px;
       width: 100%;
       max-height: 90vh;
       overflow-y: auto;
-      padding: 28px 22px;
+      padding: 30px 24px;
       position: relative;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
       border: 2px solid var(--accent);
     }
     .modal-close {
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 18px;
+      right: 18px;
       background: #f1f5f9;
       border: none;
       width: 34px;
@@ -434,6 +448,7 @@
       cursor: pointer;
       font-size: 14px;
       font-weight: bold;
+      color: #64748b;
     }
     .modal-header h3 {
       font-size: 22px;
@@ -442,7 +457,7 @@
     }
     .modal-header p {
       font-size: 13px;
-      color: var(--slate);
+      color: var(--slate-text);
       margin: 4px 0 16px 0;
     }
     .form-grid {
@@ -479,9 +494,9 @@
     }
     .service-chk-box {
       background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px;
       margin: 14px 0;
     }
     .service-chk-box h5 {
@@ -498,11 +513,35 @@
       margin-bottom: 6px;
       cursor: pointer;
     }
+
+    /* UPI Icons Strip */
+    .upi-apps-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+    }
+    .upi-chip {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
     .btn-submit-reg {
       background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: white;
       border: none;
-      padding: 12px;
+      padding: 14px;
       border-radius: 50px;
       font-size: 15px;
       font-weight: 800;
@@ -510,51 +549,38 @@
       cursor: pointer;
     }
 
-    /* Modal Step 2 Success & Redirect */
+    /* Modal Step 2 Success & Direct WhatsApp Action */
     #stepSuccess {
       display: none;
       text-align: center;
     }
     .qr-container {
       display: inline-block;
-      padding: 10px;
-      border-radius: 16px;
+      padding: 12px;
+      border-radius: 18px;
       background: white;
       border: 1px solid #cbd5e1;
-      margin: 14px 0;
+      margin: 12px 0;
       box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
     .qr-container img {
-      width: 190px;
-      height: 190px;
+      width: 200px;
+      height: 200px;
       display: block;
-    }
-    .btn-portal-redirect {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: #0f172a;
-      padding: 14px 26px;
-      border-radius: 50px;
-      font-size: 15px;
-      font-weight: 900;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.4);
-      margin-top: 10px;
     }
     .btn-wa-confirm-direct {
       background: #25d366;
       color: white;
-      padding: 12px 20px;
+      padding: 14px 24px;
       border-radius: 50px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 800;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-top: 10px;
+      margin-top: 14px;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
     }
 
     /* Chatbot Interface */
@@ -681,7 +707,7 @@
   <div class="top-announcement">
     <div class="top-content">
       <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-        <span class="lms-pill"><i class="fas fa-certificate"></i> विशेष सेवा</span>
+        <span class="lms-pill"><i class="fas fa-award"></i> विशेष सेवा</span>
         <span><strong>Aadhaar LMS Certificate</strong> खात्रीशीर काढून मिळेल!</span>
       </div>
       <div class="top-actions">
@@ -701,34 +727,33 @@
     <header class="hero-card">
       <div class="gov-badge-row">
         <span class="gov-pill active"><i class="fas fa-shield-halved"></i> अधिकृत आपले सरकार केंद्र</span>
-        <span class="gov-pill"><i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र ग्राहक सेवा केंद्र (CSP)</span>
+        <span class="gov-pill"><i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र CSP</span>
         <span class="gov-pill"><i class="fas fa-desktop"></i> अधिकृत CSC केंद्र</span>
       </div>
 
       <div class="brand-title-wrap">
-        <h1>लोटस कॉम्प्युटर इन्स्टिट्यूट</h1>
-        <h2>व आपले सरकार सेवा केंद्र</h2>
-        <div class="bank-csp-tag">
-          <i class="fas fa-university"></i> बँक ऑफ महाराष्ट्र अधिकृत ग्राहक सेवा केंद्र, अजंग
+        <h1>लोटस कॉम्प्युटर ऑनलाइन सर्व्हिसेस</h1>
+        <h2>डिजिटल सेवा व तंत्रज्ञान केंद्र</h2>
+        <div class="vle-friend-badge">
+          <i class="fas fa-handshake"></i> CSC VLE मित्र व तांत्रिक मार्गदर्शक (अजंग)
         </div>
       </div>
     </header>
 
-    <!-- CSC VLE Card Banner -->
+    <!-- CSC VLE Multi-Service Banner -->
     <section class="vle-hero-banner">
       <div class="vle-left">
         <h3><i class="fas fa-bolt" style="color: #facc15;"></i> CSC केंद्र चालकांसाठी कार्ड जनरेटर पोर्टल</h3>
-        <p>आता शेतकरी ओळखपत्र (Farmer ID), बांधकाम कामगार कार्ड (BOCW) व महासारथी कार्ड अवघ्या १ क्लिकमध्ये प्रिंट करा!</p>
+        <p>शेतकरी ओळखपत्र (Farmer ID), बांधकाम कामगार कार्ड (BOCW) व महासारथी कार्ड १ क्लिकमध्ये रेडी प्रिंट करा!</p>
         <div class="vle-tags">
           <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> शेतकरी आयडी (Farmer ID)</span>
           <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> बांधकाम कामगार कार्ड</span>
           <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> महासारथी बल्क प्रिंट</span>
-          <span class="vle-tag-item" style="color: #fef08a;"><i class="fas fa-coins"></i> प्रति कार्ड फक्त ₹१०</span>
         </div>
       </div>
       <div class="vle-action-group">
         <button class="btn-register-vle" onclick="openRegisterModal()">
-          <i class="fas fa-user-plus"></i> चालक नोंदणी करा
+          <i class="fas fa-user-plus"></i> पोर्टल नोंदणी करा (Pay ₹149)
         </button>
         <button class="btn-wallet-top" onclick="openWalletModal()">
           <i class="fas fa-wallet"></i> वॉलेट रिचार्ज करा
@@ -953,32 +978,32 @@
     <!-- Contact & Center Details (Clean Footer Section) -->
     <div class="footer-contact-card">
       <div class="footer-info">
-        <h4><i class="fas fa-circle-user" style="color: #2563eb;"></i> प्रो. प्रा. श्री रवी कन्नोर</h4>
+        <h4><i class="fas fa-circle-user" style="color: #2563eb;"></i> प्रो. प्रा. श्री रवी कन्नोर (CSC VLE मित्र)</h4>
         <p><i class="fas fa-location-dot" style="color: #ef4444;"></i> <strong>पत्ता:</strong> मराठी शाळेजवळ, अजंग, ता. मालेगाव, जि. नाशिक - ४२३२०६</p>
         <p><i class="fas fa-envelope" style="color: #f59e0b;"></i> <strong>ईमेल:</strong> lotuspan17@gmail.com</p>
-        <p><i class="fas fa-shield-halved" style="color: #10b981;"></i> <strong>विश्वास | सुरक्षितता | सेवा</strong> — लोटस कॉम्प्युटर इन्स्टिट्यूट</p>
+        <p><i class="fas fa-headset" style="color: #10b981;"></i> <strong>सहाय्यता:</strong> VLE मित्रांना कामात येणाऱ्या अडचणींवर १००% तांत्रिक मदत.</p>
       </div>
       <div class="footer-actions">
         <a href="tel:7057163216" class="btn-contact-act btn-call-blue">
           <i class="fas fa-phone-volume"></i> 7057163216 कॉल करा
         </a>
-        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20Aaple%20Sarkar%20Kendra%20sevanbabat%20mahiti%20havi%20aahe." target="_blank" class="btn-contact-act btn-wa-green">
-          <i class="fab fa-whatsapp"></i> WhatsApp वर बोला
+        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20CSC%20madhe%20madat%20havi%20aahe." target="_blank" class="btn-contact-act btn-wa-green">
+          <i class="fab fa-whatsapp"></i> WhatsApp वर संपर्क
         </a>
       </div>
     </div>
 
   </div>
 
-  <!-- MODAL 1: CSC VLE Registration + Password + Redirect -->
+  <!-- MODAL 1: CSC VLE Registration (Auto ₹149 Payment + WhatsApp Only Link Release) -->
   <div class="modal-overlay" id="regModal" onclick="closeModalOnOutside(event, 'regModal')">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('regModal')"><i class="fas fa-times"></i></button>
 
       <div id="stepForm">
         <div class="modal-header">
-          <h3><i class="fas fa-user-plus" style="color: #0284c7;"></i> CSC VLE पोर्टल नोंदणी</h3>
-          <p>पोर्टल लॉगिन आयडीसाठी खालील माहिती भरा. नोंदणीनंतर लगेच पोर्टल सुरू होईल.</p>
+          <h3><i class="fas fa-user-plus" style="color: #0284c7;"></i> CSC चालक पोर्टल नोंदणी (Access Fee: ₹149)</h3>
+          <p>खालील माहिती भरा. १-टाइम नोंदणी फी <strong>₹१४९</strong> भरल्यानंतर तुम्हाला WhatsApp वर लॉगिन लिंक पाठवली जाईल.</p>
         </div>
 
         <form onsubmit="handleRegistrationSubmit(event)">
@@ -1023,41 +1048,55 @@
               <input type="checkbox" name="vleServices" value="Mahasarthi Bulk Print" checked>
               <span>३. महासारथी कार्ड बल्क प्रिंट (Mahasarthi Bulk Print)</span>
             </label>
+            <div style="font-size: 11px; color: #166534; margin-top: 6px; font-weight: 700;">
+              * टीप: कार्ड डाउनलोड करण्यासाठी प्रति कार्ड ₹१० कपात होतील.
+            </div>
           </div>
 
           <button type="submit" class="btn-submit-reg">
-            नोंदणी पूर्ण करा आणि पोर्टल सुरू करा <i class="fas fa-arrow-right"></i>
+            पुढे जा (Pay ₹149 & Generate QR) <i class="fas fa-arrow-right"></i>
           </button>
         </form>
       </div>
 
-      <!-- Step 2: Success & Direct Portal Redirect -->
+      <!-- Step 2: Payment ₹149 with UPI Icons -->
       <div id="stepSuccess">
-        <h3 style="color: #16a34a; font-size: 20px; font-weight: 800;">
-          <i class="fas fa-circle-check"></i> नोंदणी यशस्वी झाली आहे!
+        <h3 style="color: #0f172a; font-size: 20px; font-weight: 900;">
+          <i class="fas fa-qrcode" style="color: #f59e0b;"></i> पोर्टल ॲक्टिव्हेशन फी: ₹149
         </h3>
-        <p style="font-size: 14px; color: #475569; margin: 6px 0;">
-          तुमचा लॉगिन आयडी: <strong id="dispEmail" style="color:#0284c7;"></strong>
+        <p style="font-size: 13px; color: #475569; margin: 4px 0 10px 0;">
+          खालील QR कोड स्कॅन करून <strong>₹149</strong> भरा किंवा ॲप निवडा:
         </p>
 
-        <div style="background: #eff6ff; border: 1px dashed #93c5fd; padding: 12px; border-radius: 12px; margin: 12px 0; font-size: 13px; text-align: left;">
-          <i class="fas fa-circle-info" style="color: #0284c7;"></i> <strong>महत्त्वाची सूचना:</strong> कार्ड डाउनलोडसाठी प्रति कार्ड ₹१० कपात होतील. पोर्टल उघडल्यावर तुम्ही थेट काम सुरू करू शकता.
+        <div class="qr-container">
+          <img id="regQrImg" src="" alt="PhonePe QR Code ₹149">
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center; margin-top: 15px;">
-          <a id="btnPortalRedirect" href="https://lotusiti-pi.vercel.app/" target="_blank" class="btn-portal-redirect">
-            <i class="fas fa-external-link-alt"></i> थेट पोर्टलवर लॉगिन करा (Open Portal)
-          </a>
-          <a id="btnWaRegisterNotify" href="#" target="_blank" class="btn-wa-confirm-direct">
-            <i class="fab fa-whatsapp"></i> नोंदणी डिटेल्स WhatsApp वर शेअर करा
-          </a>
+        <div style="font-weight: 800; font-size: 15px; color: #0f172a; margin-bottom: 6px;">
+          UPI ID: <span style="color: #5f259f;">ravi.kannor@ybl</span>
         </div>
+
+        <!-- UPI Apps Direct Click Buttons -->
+        <div class="upi-apps-row">
+          <a id="btnPayPhonePe" href="#" class="upi-chip"><i class="fas fa-mobile-screen" style="color:#5f259f;"></i> PhonePe</a>
+          <a id="btnPayGPay" href="#" class="upi-chip"><i class="fab fa-google" style="color:#ea4335;"></i> GPay</a>
+          <a id="btnPayPaytm" href="#" class="upi-chip"><i class="fas fa-wallet" style="color:#00baf2;"></i> Paytm</a>
+          <a id="btnPayBHIM" href="#" class="upi-chip"><i class="fas fa-building-columns" style="color:#00796b;"></i> BHIM UPI</a>
+        </div>
+
+        <div style="background: #fffbeb; border: 1px dashed #f59e0b; padding: 12px; border-radius: 12px; margin: 12px 0; font-size: 13px; color: #92400e; text-align: left;">
+          <i class="fas fa-shield-halved"></i> <strong>सुरक्षितता सूचना:</strong> पेमेंट पूर्ण झाल्यानंतर खालील बटनावर क्लिक करा. तुमचा रजिस्ट्रेशन डेटा व पेमेंट स्क्रीनशॉट WhatsApp वर मिळताच तुम्हाला लॉगिन लिंक व ॲक्सेस त्वरित दिला जाईल.
+        </div>
+
+        <a id="btnWaRegisterNotify" href="#" target="_blank" class="btn-wa-confirm-direct">
+          <i class="fab fa-whatsapp" style="font-size: 20px;"></i> तपशील व पेमेंट स्क्रीनशॉट पाठवा
+        </a>
       </div>
 
     </div>
   </div>
 
-  <!-- MODAL 2: Wallet Recharge / Add Balance -->
+  <!-- MODAL 2: Wallet Recharge (Variable Amount) -->
   <div class="modal-overlay" id="walletModal" onclick="closeModalOnOutside(event, 'walletModal')">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('walletModal')"><i class="fas fa-times"></i></button>
@@ -1137,7 +1176,7 @@
   </div>
 
   <script>
-    // Modal Helpers
+    // Modal Controller
     function openRegisterModal() {
       document.getElementById('regModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
@@ -1159,7 +1198,7 @@
       if (e.target.id === id) closeModal(id);
     }
 
-    // Registration Handler + Portal Redirection
+    // Registration Handler with Auto ₹149 UPI Deep Link
     function handleRegistrationSubmit(e) {
       e.preventDefault();
 
@@ -1174,23 +1213,37 @@
       document.querySelectorAll('input[name="vleServices"]:checked').forEach(cb => selected.push(cb.value));
       const srvList = selected.join(', ') || 'All 3 Services';
 
-      // WhatsApp Message
+      // 149 INR Fixed Deep Link
+      const upiId = "ravi.kannor@ybl";
+      const upi149Link = `upi://pay?pa=${upiId}&pn=Ravi%20Kannor&am=149&cu=INR&tn=CSC%20Portal%20Registration%20149`;
+
+      // Generate Auto 149 QR
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upi149Link)}`;
+      document.getElementById('regQrImg').src = qrUrl;
+
+      // Set App Links
+      document.getElementById('btnPayPhonePe').href = upi149Link;
+      document.getElementById('btnPayGPay').href = upi149Link;
+      document.getElementById('btnPayPaytm').href = upi149Link;
+      document.getElementById('btnPayBHIM').href = upi149Link;
+
+      // Complete WhatsApp Payload (English for crisp formatting)
       const rawText = 
-        `*New CSC VLE Portal Registration*\n\n` +
+        `*New CSC VLE Portal Registration Request (₹149 Paid)*\n\n` +
         `👤 Full Name: ${fullName}\n` +
         `📱 Mobile No: ${mobile}\n` +
         `📧 Login Email: ${email}\n` +
         `🔑 Password: ${password}\n` +
         `🏢 Center Name: ${center}\n` +
         `📍 Address: ${address}\n` +
-        `🛠️ Services: ${srvList}\n\n` +
-        `Hello Ravi Sir, I have registered for the CSC Card Portal. Please activate my account.`;
+        `🛠️ Services: ${srvList}\n` +
+        `💵 Fee Paid: ₹149 via UPI (${upiId})\n\n` +
+        `Sir, I have completed the ₹149 payment. Screenshot attached below. Please verify and send me the portal activation login link.`;
 
       const waUrl = `https://api.whatsapp.com/send?phone=917057163216&text=${encodeURIComponent(rawText)}`;
       document.getElementById('btnWaRegisterNotify').href = waUrl;
-      document.getElementById('dispEmail').textContent = email;
 
-      // Switch to success & portal redirect
+      // Switch to Payment Screen
       document.getElementById('stepForm').style.display = 'none';
       document.getElementById('stepSuccess').style.display = 'block';
     }
@@ -1217,7 +1270,7 @@
       alert("तुमची रिचार्ज विनंती व्हॉट्सॲपवर पाठवली आहे. १ ते ५ मिनिटांत बॅलन्स ॲड होईल.");
     }
 
-    // Accurate Knowledge Base (As Per Actual Government / Center Rules)
+    // 100% Accurate Knowledge Base
     const accurateKnowledge = {
       'महा आयडी': 'महा आयडी व महासारथी योजनेसाठी आवश्यक कागदपत्रे: \n१) फक्त आधार कार्ड\n२) चालू मोबाईल नंबर',
       'महिला शेतकरी': 'महिला शेतकरी सबलीकरण योजनेसाठी आवश्यक कागदपत्रे: \n१) फक्त आधार कार्ड',
@@ -1300,7 +1353,7 @@
         waLink.style.marginTop = '6px';
         waLink.style.color = '#0284c7';
         waLink.style.fontWeight = '700';
-        waLink.innerHTML = '👉 WhatsApp वर अर्ज करा';
+        waLink.innerHTML = '👉 WhatsApp वर संपर्क करा';
         div.appendChild(waLink);
       }
 
