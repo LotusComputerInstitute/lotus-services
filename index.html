@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>लोटस कॉम्प्युटर ऑनलाइन सर्व्हिसेस | CSC VLE मित्र</title>
   
-  <!-- Modern Computer Microchip Tech Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='chip' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f2fe'/><stop offset='50%25' stop-color='%234facfe'/><stop offset='100%25' stop-color='%236b21a8'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='%230b0f19'/><rect x='20' y='20' width='60' height='60' rx='14' fill='none' stroke='url(%23chip)' stroke-width='6'/><circle cx='50' cy='50' r='14' fill='url(%23chip)'/><path d='M50 8v12M50 80v12M8 50h12M80 50h12' stroke='url(%23chip)' stroke-width='5' stroke-linecap='round'/></svg>">
+  <!-- High-Tech Microchip Glow Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='chip' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f2fe'/><stop offset='50%25' stop-color='%2338ef7d'/><stop offset='100%25' stop-color='%23ff007f'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='%230a0f1d'/><rect x='20' y='20' width='60' height='60' rx='14' fill='none' stroke='url(%23chip)' stroke-width='6'/><circle cx='50' cy='50' r='14' fill='url(%23chip)'/><path d='M50 8v12M50 80v12M8 50h12M80 50h12' stroke='url(%23chip)' stroke-width='5' stroke-linecap='round'/></svg>">
 
-  <!-- Royal Calligraphy & Tech Fonts -->
+  <!-- Calligraphy & Clean Unicode Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -17,14 +17,10 @@
   <style>
     :root {
       --primary: #2563eb;
-      --primary-dark: #1d4ed8;
       --accent: #f59e0b;
-      --accent-hover: #d97706;
-      --bg-dark: #0b0f19;
-      --card-bg: #ffffff;
-      --border-subtle: #e2e8f0;
-      --slate-text: #475569;
       --emerald: #10b981;
+      --dark-card: #0d1527;
+      --border-glow: rgba(56, 189, 248, 0.3);
     }
 
     * {
@@ -37,7 +33,8 @@
 
     body {
       font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
-      background: radial-gradient(circle at 15% 15%, #f1f5f9 0%, #e2e8f0 100%);
+      background: radial-gradient(circle at 10% 10%, #0d1b2a 0%, #1e1b4b 35%, #064e3b 75%, #022c22 100%);
+      background-attachment: fixed;
       color: #0f172a;
       line-height: 1.6;
       padding-bottom: 80px;
@@ -49,9 +46,10 @@
       padding: 0 16px;
     }
 
-    /* Top Sticky Bar */
+    /* Top Announcement Bar */
     .top-announcement {
-      background: linear-gradient(90deg, #0b0f19 0%, #1e1b4b 50%, #0369a1 100%);
+      background: rgba(13, 21, 39, 0.94);
+      backdrop-filter: blur(12px);
       color: #ffffff;
       padding: 10px 16px;
       font-size: 13px;
@@ -60,7 +58,7 @@
       top: 0;
       z-index: 100;
       border-bottom: 2px solid var(--accent);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
     }
     .top-content {
       max-width: 1140px;
@@ -72,21 +70,22 @@
       gap: 10px;
     }
     .lms-pill {
-      background: rgba(245, 158, 11, 0.2);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(234, 88, 12, 0.2));
       border: 1px solid var(--accent);
       color: #fef08a;
-      padding: 3px 12px;
+      padding: 4px 14px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
       animation: pulseAlert 2.5s infinite;
     }
     @keyframes pulseAlert {
       0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.03); opacity: 0.85; }
+      50% { transform: scale(1.03); opacity: 0.9; }
     }
     .top-actions {
       display: flex;
@@ -105,6 +104,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
     }
     .btn-top-reg {
       background: linear-gradient(135deg, #f59e0b, #ea580c);
@@ -118,29 +118,39 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
     }
 
     /* Hero Brand Banner */
     .hero-card {
-      background: #ffffff;
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 50%, #eff6ff 100%);
       border-radius: 26px;
-      padding: 32px 28px;
+      padding: 30px 26px;
       margin: 22px auto 26px auto;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
-      border: 1px solid var(--border-subtle);
-      border-top: 6px solid var(--primary);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+      border: 2px solid #38bdf8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+    }
+    .brand-left-box {
+      flex: 1;
+      min-width: 290px;
     }
     .gov-badge-row {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .gov-pill {
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
-      color: #334155;
-      padding: 5px 14px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e40af;
+      padding: 4px 14px;
       border-radius: 50px;
       font-size: 12px;
       font-weight: 800;
@@ -148,20 +158,13 @@
       align-items: center;
       gap: 6px;
     }
-    .gov-pill.active {
-      background: #ecfdf5;
-      color: #047857;
-      border-color: #a7f3d0;
-    }
-
     .brand-title-wrap h1 {
       font-family: 'Rozha One', cursive;
       font-size: 38px;
       color: #b91c1c;
-      letter-spacing: 0.5px;
       line-height: 1.2;
       margin-bottom: 4px;
-      text-shadow: 0 2px 4px rgba(185, 28, 28, 0.08);
+      text-shadow: 0 2px 4px rgba(185, 28, 28, 0.12);
     }
     .brand-title-wrap h2 {
       font-family: 'Yatra One', cursive;
@@ -173,57 +176,64 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #eff6ff, #dbeafe);
-      color: #1e40af;
-      padding: 7px 18px;
+      background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+      color: #065f46;
+      padding: 6px 18px;
       border-radius: 50px;
       font-weight: 800;
+      font-size: 13px;
+      border: 1.5px solid #6ee7b7;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+    }
+    .btn-channel-hero {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 50px;
       font-size: 14px;
-      border: 1.5px solid #bfdbfe;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+      transition: all 0.25s;
+    }
+    .btn-channel-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.55);
     }
 
     /* CSC VLE Multi-Service Card */
     .vle-hero-banner {
-      background: radial-gradient(circle at 85% 15%, #1e1b4b 0%, #090d16 80%);
+      background: radial-gradient(circle at 85% 15%, #1e1b4b 0%, #0a1122 85%);
       color: #ffffff;
       border-radius: 26px;
       padding: 32px 28px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      border: 2px solid var(--accent);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 30px rgba(245, 158, 11, 0.2);
+    }
+    .vle-top-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
       flex-wrap: wrap;
-      border: 2px solid var(--accent);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
     }
     .vle-left h3 {
       font-family: 'Yatra One', cursive;
-      font-size: 26px;
+      font-size: 28px;
       color: #facc15;
-      margin-bottom: 8px;
-      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .vle-left p {
       font-size: 14px;
       color: #cbd5e1;
-      max-width: 650px;
-    }
-    .vle-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 15px;
-    }
-    .vle-tag-item {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      padding: 6px 14px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #f8fafc;
+      max-width: 680px;
     }
     .vle-action-group {
       display: flex;
@@ -231,7 +241,7 @@
       flex-wrap: wrap;
     }
     .btn-register-vle {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
       color: #0f172a;
       border: none;
       padding: 14px 26px;
@@ -242,12 +252,12 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
       transition: all 0.25s;
     }
     .btn-register-vle:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.6);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.65);
     }
     .btn-wallet-top {
       background: linear-gradient(135deg, #10b981, #059669);
@@ -261,11 +271,78 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Live Card Previews Strip */
+    .card-preview-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+      padding-top: 22px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+    .mock-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 18px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .mock-visual {
+      width: 86px;
+      height: 54px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6px 8px;
+      color: white;
+      font-size: 8px;
+      font-weight: 900;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .mock-visual::after {
+      content: '';
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      width: 14px;
+      height: 10px;
+      background: rgba(255,255,255,0.35);
+      border-radius: 2px;
+    }
+    .mv-farmer {
+      background: linear-gradient(135deg, #15803d, #166534);
+      border: 1px solid #4ade80;
+    }
+    .mv-bocw {
+      background: linear-gradient(135deg, #c2410c, #9a3412);
+      border: 1px solid #fb923c;
+    }
+    .mock-desc h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #facc15;
+      margin-bottom: 2px;
+    }
+    .mock-desc p {
+      font-size: 12px;
+      color: #e2e8f0;
+      line-height: 1.35;
     }
 
     /* Section Headings */
     .section-title-wrap {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -273,16 +350,17 @@
       gap: 8px;
     }
     .section-title-wrap h3 {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 900;
-      color: #0f172a;
+      color: #ffffff;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
     .section-title-wrap p {
       font-size: 13px;
-      color: var(--slate-text);
+      color: #cbd5e1;
     }
 
     /* Services Grid */
@@ -292,11 +370,11 @@
       gap: 16px;
     }
     .service-card {
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.98);
       border-radius: 20px;
       padding: 18px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+      border: 2px solid transparent;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       display: flex;
       align-items: center;
       gap: 14px;
@@ -305,12 +383,13 @@
       transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.09);
-      border-color: #cbd5e1;
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+      border-color: var(--accent);
+      background: #ffffff;
     }
     .service-card.priority-gold {
-      border: 1.5px solid #22c55e;
+      border: 2px solid #22c55e;
       background: #f0fdf4;
     }
     .badge-corner {
@@ -325,8 +404,8 @@
       border-radius: 20px;
     }
     .s-icon {
-      width: 46px;
-      height: 46px;
+      width: 48px;
+      height: 48px;
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -334,9 +413,10 @@
       font-size: 20px;
       color: #ffffff;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     .s-title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 800;
       color: #0f172a;
       line-height: 1.35;
@@ -347,30 +427,30 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      margin-top: 3px;
+      margin-top: 4px;
       font-weight: 700;
     }
 
-    /* Colors */
-    .ic-green { background: #10b981; }
-    .ic-blue { background: #3b82f6; }
-    .ic-cyan { background: #06b6d4; }
-    .ic-amber { background: #f59e0b; }
-    .ic-rose { background: #f43f5e; }
-    .ic-indigo { background: #6366f1; }
-    .ic-purple { background: #8b5cf6; }
-    .ic-teal { background: #14b8a6; }
-    .ic-orange { background: #f97316; }
-    .ic-red { background: #ef4444; }
+    /* Vibrant Color Palettes */
+    .ic-green { background: linear-gradient(135deg, #10b981, #059669); }
+    .ic-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .ic-cyan { background: linear-gradient(135deg, #06b6d4, #0e7490); }
+    .ic-amber { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .ic-rose { background: linear-gradient(135deg, #f43f5e, #be123c); }
+    .ic-indigo { background: linear-gradient(135deg, #6366f1, #4338ca); }
+    .ic-purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+    .ic-teal { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+    .ic-orange { background: linear-gradient(135deg, #f97316, #c2410c); }
+    .ic-red { background: linear-gradient(135deg, #ef4444, #b91c1c); }
 
     /* Footer Contact Card */
     .footer-contact-card {
       background: #ffffff;
       border-radius: 26px;
       padding: 32px 26px;
-      margin-top: 40px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-top: 45px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -388,7 +468,7 @@
     }
     .footer-info p {
       font-size: 14px;
-      color: var(--slate-text);
+      color: #475569;
       margin-bottom: 4px;
     }
     .footer-actions {
@@ -416,7 +496,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(11, 15, 25, 0.78);
+      background: rgba(11, 15, 25, 0.85);
       backdrop-filter: blur(8px);
       display: none;
       align-items: center;
@@ -433,7 +513,7 @@
       overflow-y: auto;
       padding: 30px 24px;
       position: relative;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
       border: 2px solid var(--accent);
     }
     .modal-close {
@@ -457,7 +537,7 @@
     }
     .modal-header p {
       font-size: 13px;
-      color: var(--slate-text);
+      color: #475569;
       margin: 4px 0 16px 0;
     }
     .form-grid {
@@ -494,7 +574,7 @@
     }
     .service-chk-box {
       background: #f8fafc;
-      border: 1px solid var(--border-subtle);
+      border: 1px solid #e2e8f0;
       border-radius: 14px;
       padding: 14px;
       margin: 14px 0;
@@ -514,27 +594,28 @@
       cursor: pointer;
     }
 
-    /* UPI Icons Strip */
+    /* UPI Apps Row */
     .upi-apps-row {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      margin: 12px 0;
+      margin: 14px 0;
       flex-wrap: wrap;
     }
     .upi-chip {
       background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 6px 14px;
+      border: 1px solid #cbd5e1;
+      padding: 7px 16px;
       border-radius: 50px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 800;
       color: #334155;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     .btn-submit-reg {
@@ -549,7 +630,7 @@
       cursor: pointer;
     }
 
-    /* Modal Step 2 Success & Direct WhatsApp Action */
+    /* Modal Step 2 Success & WhatsApp Verification Flow */
     #stepSuccess {
       display: none;
       text-align: center;
@@ -561,7 +642,7 @@
       background: white;
       border: 1px solid #cbd5e1;
       margin: 12px 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
     .qr-container img {
       width: 200px;
@@ -697,6 +778,7 @@
       .form-grid { grid-template-columns: 1fr; }
       .form-group.full { grid-column: span 1; }
       .services-grid { grid-template-columns: 1fr; }
+      .hero-card { flex-direction: column; text-align: left; }
       .chat-window { width: 92%; right: 4%; }
     }
   </style>
@@ -725,45 +807,75 @@
 
     <!-- Hero Card -->
     <header class="hero-card">
-      <div class="gov-badge-row">
-        <span class="gov-pill active"><i class="fas fa-shield-halved"></i> अधिकृत आपले सरकार केंद्र</span>
-        <span class="gov-pill"><i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र CSP</span>
-        <span class="gov-pill"><i class="fas fa-desktop"></i> अधिकृत CSC केंद्र</span>
+      <div class="brand-left-box">
+        <div class="gov-badge-row">
+          <span class="gov-pill active"><i class="fas fa-shield-halved"></i> अधिकृत आपले सरकार केंद्र</span>
+          <span class="gov-pill"><i class="fas fa-building-columns"></i> बँक ऑफ महाराष्ट्र CSP</span>
+          <span class="gov-pill"><i class="fas fa-desktop"></i> अधिकृत CSC केंद्र</span>
+        </div>
+
+        <div class="brand-title-wrap">
+          <h1>लोटस कॉम्प्युटर ऑनलाइन सर्व्हिसेस</h1>
+          <h2>डिजिटल सेवा व तंत्रज्ञान केंद्र</h2>
+          <div class="vle-friend-badge">
+            <i class="fas fa-handshake"></i> CSC VLE मित्र व तांत्रिक मार्गदर्शक (अजंग)
+          </div>
+        </div>
       </div>
 
-      <div class="brand-title-wrap">
-        <h1>लोटस कॉम्प्युटर ऑनलाइन सर्व्हिसेस</h1>
-        <h2>डिजिटल सेवा व तंत्रज्ञान केंद्र</h2>
-        <div class="vle-friend-badge">
-          <i class="fas fa-handshake"></i> CSC VLE मित्र व तांत्रिक मार्गदर्शक (अजंग)
-        </div>
+      <div>
+        <a href="https://whatsapp.com/channel/0029Va5AemLFCCoLzeU6kH1j" target="_blank" class="btn-channel-hero">
+          <i class="fab fa-whatsapp" style="font-size: 18px;"></i> WhatsApp चॅनेल फॉलो करा
+        </a>
       </div>
     </header>
 
-    <!-- CSC VLE Multi-Service Banner -->
+    <!-- CSC VLE Multi-Service Banner with Live Card Previews -->
     <section class="vle-hero-banner">
-      <div class="vle-left">
-        <h3><i class="fas fa-bolt" style="color: #facc15;"></i> CSC केंद्र चालकांसाठी कार्ड जनरेटर पोर्टल</h3>
-        <p>शेतकरी ओळखपत्र (Farmer ID), बांधकाम कामगार कार्ड (BOCW) व महासारथी कार्ड १ क्लिकमध्ये रेडी प्रिंट करा!</p>
-        <div class="vle-tags">
-          <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> शेतकरी आयडी (Farmer ID)</span>
-          <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> बांधकाम कामगार कार्ड</span>
-          <span class="vle-tag-item"><i class="fas fa-check-circle" style="color: #4ade80;"></i> महासारथी बल्क प्रिंट</span>
+      <div class="vle-top-info">
+        <div class="vle-left">
+          <h3><i class="fas fa-bolt" style="color: #facc15;"></i> CSC केंद्र चालकांसाठी कार्ड जनरेटर पोर्टल</h3>
+          <p>शेतकरी ओळखपत्र (Farmer ID), बांधकाम कामगार कार्ड (BOCW) व महासारथी कार्ड १ क्लिकमध्ये रेडी प्रिंट करा!</p>
+        </div>
+        <div class="vle-action-group">
+          <button class="btn-register-vle" onclick="openRegisterModal()">
+            <i class="fas fa-user-plus"></i> पोर्टल नोंदणी करा (Pay ₹149)
+          </button>
+          <button class="btn-wallet-top" onclick="openWalletModal()">
+            <i class="fas fa-wallet"></i> वॉलेट रिचार्ज करा
+          </button>
         </div>
       </div>
-      <div class="vle-action-group">
-        <button class="btn-register-vle" onclick="openRegisterModal()">
-          <i class="fas fa-user-plus"></i> पोर्टल नोंदणी करा (Pay ₹149)
-        </button>
-        <button class="btn-wallet-top" onclick="openWalletModal()">
-          <i class="fas fa-wallet"></i> वॉलेट रिचार्ज करा
-        </button>
+
+      <!-- Real Cards Visual Previews Strip -->
+      <div class="card-preview-strip">
+        <div class="mock-card">
+          <div class="mock-visual mv-farmer">
+            <div>FARMER ID</div>
+            <div style="font-size:6px; opacity:0.8;">MAHARASHTRA</div>
+          </div>
+          <div class="mock-desc">
+            <h4>शेतकरी आयडी (Farmer ID)</h4>
+            <p>१-क्लिक पीव्हीसी स्मार्ट कार्ड प्रिंटिंग रेडी फॉरमॅट.</p>
+          </div>
+        </div>
+
+        <div class="mock-card">
+          <div class="mock-visual mv-bocw">
+            <div>BOCW CARD</div>
+            <div style="font-size:6px; opacity:0.8;">BANDHKAM KAMGAR</div>
+          </div>
+          <div class="mock-desc">
+            <h4>बांधकाम कामगार कार्ड (BOCW)</h4>
+            <p>शासकीय डेटावरून थेट स्मार्ट कार्ड जनरेशन.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Services Header -->
     <div class="section-title-wrap">
-      <h3><i class="fas fa-layer-group" style="color: #0284c7;"></i> सर्व डिजिटल व शासकीय सेवा</h3>
+      <h3><i class="fas fa-layer-group" style="color: #facc15;"></i> सर्व डिजिटल व शासकीय सेवा</h3>
       <p>माहितीसाठी सेवेवर क्लिक करा; आमचा स्मार्ट मदतनीस तुम्हाला अचूक कागदपत्रे सांगेल.</p>
     </div>
 
@@ -975,7 +1087,7 @@
 
     </div>
 
-    <!-- Contact & Center Details (Clean Footer Section) -->
+    <!-- Contact Details Card -->
     <div class="footer-contact-card">
       <div class="footer-info">
         <h4><i class="fas fa-circle-user" style="color: #2563eb;"></i> प्रो. प्रा. श्री रवी कन्नोर (CSC VLE मित्र)</h4>
@@ -987,8 +1099,8 @@
         <a href="tel:7057163216" class="btn-contact-act btn-call-blue">
           <i class="fas fa-phone-volume"></i> 7057163216 कॉल करा
         </a>
-        <a href="https://wa.me/917057163216?text=Namaskar%20Ravi%20Sir%2C%20mala%20CSC%20madhe%20madat%20havi%20aahe." target="_blank" class="btn-contact-act btn-wa-green">
-          <i class="fab fa-whatsapp"></i> WhatsApp वर संपर्क
+        <a href="https://whatsapp.com/channel/0029Va5AemLFCCoLzeU6kH1j" target="_blank" class="btn-contact-act btn-wa-green">
+          <i class="fab fa-whatsapp"></i> WhatsApp चॅनेल फॉलो करा
         </a>
       </div>
     </div>
@@ -1227,7 +1339,7 @@
       document.getElementById('btnPayPaytm').href = upi149Link;
       document.getElementById('btnPayBHIM').href = upi149Link;
 
-      // Complete WhatsApp Payload (English for crisp formatting)
+      // Complete WhatsApp Payload
       const rawText = 
         `*New CSC VLE Portal Registration Request (₹149 Paid)*\n\n` +
         `👤 Full Name: ${fullName}\n` +
